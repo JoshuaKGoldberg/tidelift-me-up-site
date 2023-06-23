@@ -1,5 +1,8 @@
 import { PackageEstimate } from "tidelift-me-up";
 
+import { ResultsContainer } from "./ResultsContainer";
+import { Estimate } from "./Estimate";
+
 import styles from "./ResultDisplay.module.css";
 
 export interface ResultDisplayProps {
@@ -7,24 +10,53 @@ export interface ResultDisplayProps {
 }
 
 export function ResultDisplay({ result }: ResultDisplayProps) {
+	result = [];
+
 	if (!result) {
 		return null;
 	}
 
 	if (Array.isArray(result) && !result.length) {
-		return <div className={styles.resultDisplay}>No results...</div>;
+		return (
+			<ResultsContainer heading="No results...">
+				<p className={styles.p}>Ah well!</p>
+			</ResultsContainer>
+		);
+	}
+
+	if (result instanceof Error) {
+		return (
+			<ResultsContainer heading="Oh no! Error!">
+				<pre className={styles.error}>
+					<code>{result.stack}</code>
+				</pre>
+			</ResultsContainer>
+		);
 	}
 
 	return (
-		<div className={styles.resultDisplay}>
-			<h3>Displaying results nicely is a work in progress :)</h3>
-			<pre>
-				<code>
-					{result instanceof Error
-						? result.stack
-						: JSON.stringify(result, null, 4)}
-				</code>
-			</pre>
-		</div>
+		<ResultsContainer heading={`${counted(result.length, "Package")} Found`}>
+			{(
+				[
+					[result.filter((result) => !result.lifted), "Not Yet Lifted"],
+					[result.filter((result) => result.lifted), "Already Lifted"],
+				] as const
+			).map(([estimates, subHeading]) => (
+				<div className={styles.section} key={subHeading}>
+					<h4 className={styles.subHeading}>{subHeading}</h4>
+					<ul className={styles.estimates}>
+						{estimates
+							.sort((a, b) => a.name.localeCompare(b.name))
+							.map((packageEstimate) => (
+								<Estimate data={packageEstimate} key={packageEstimate.name} />
+							))}
+					</ul>
+				</div>
+			))}
+		</ResultsContainer>
 	);
+}
+
+function counted(count: number, text: string) {
+	return `${count} ${text}${count === 1 ? "" : "s"}`;
 }

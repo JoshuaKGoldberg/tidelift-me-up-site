@@ -12,11 +12,16 @@ https://github.com/wayfair/rainbow-sprinkles/issues/148
 	-webkit-font-smoothing: antialiased;
 }
 
+:is(.main, .footer) a {
+	color: var(--color-foreground-bold);
+	/* todo: underline? */
+}
+
 .main {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin: clamp(5rem, 25vw, 10rem) auto 0;
+	margin: clamp(3.5rem, 7.5vw, 10rem) auto 0;
 }
 
 .h1 {
@@ -38,6 +43,7 @@ https://github.com/wayfair/rainbow-sprinkles/issues/148
 }
 
 .footer {
-	margin: 7.5rem auto 2.5rem;
+	color: var(--color-bold-bottom);
+	margin: clamp(2.5rem, 5vw, 5rem) auto 2.5rem;
 	text-align: center;
 }

@@ -1,0 +1,9 @@
+.resultsContainer {
+	margin: 2rem 1rem 0;
+}
+
+.h3 {
+	font-size: var(--font-size-large);
+	margin: 2rem 1rem 1rem;
+	text-align: center;
+}

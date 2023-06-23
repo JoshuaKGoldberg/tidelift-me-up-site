@@ -31,7 +31,7 @@ export function OptionsForm({ options }: OptionsFormProps) {
 				</div>
 
 				<button className={styles.submit} type="submit">
-					Submit
+					Search
 				</button>
 			</div>
 

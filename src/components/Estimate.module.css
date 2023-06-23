@@ -1,0 +1,13 @@
+.estimate {
+	width: 100%;
+	display: flex;
+}
+
+.name {
+	font-weight: bold;
+	width: 60%;
+}
+
+.money {
+	width: 30%;
+}
