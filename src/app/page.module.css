@@ -1,0 +1,43 @@
+/*
+Todo: I'll probably switch this to rainbow-sprinkles, pending...
+https://github.com/wayfair/rainbow-sprinkles/issues/148
+*/
+
+.main,
+.footer {
+	color: var(--color-foreground);
+	max-width: 50rem;
+	padding: 0 2.5rem;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+.main {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: clamp(5rem, 25vw, 10rem) auto 0;
+}
+
+.h1 {
+	/* Todo: give a nice little gradient accent */
+	/* color: var(--colors-text-bold); */
+
+	color: var(--color-foreground-bold);
+	font-size: var(--font-size-hero);
+	font-weight: var(--font-weight-hero);
+	text-align: center;
+	line-height: 0.75;
+	margin-bottom: 1.5rem;
+}
+
+.p {
+	font-size: var(--font-size-large);
+	text-align: center;
+	margin-top: 0.5rem;
+}
+
+.footer {
+	margin: 7.5rem auto 2.5rem;
+	text-align: center;
+}

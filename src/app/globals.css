@@ -1,0 +1,66 @@
+:root {
+	--border-radius-medium: 0.25rem;
+	--border-radius-large: 0.5rem;
+
+	--color-background: white;
+	--color-foreground: #073535;
+	--color-foreground-bold: #142121;
+	--color-foreground-accent: #122c22;
+	--color-bold-bottom: #0e4c3c;
+	--color-bold-top: #09949c;
+	--color-subtle-bottom: #e9fff2;
+	--color-subtle-top: #ddfbff;
+
+	/* Todo: convert to a gradient for borders? */
+	--colors-border-bold: var(--color-bold-bottom);
+
+	--colors-background-bold: linear-gradient(
+		to bottom,
+		var(--color-bold-top),
+		var(--color-bold-bottom)
+	);
+
+	--colors-text-bold: linear-gradient(
+		to bottom,
+		var(--color-foreground-accent) 0%,
+		var(--color-foreground-bold) 25%
+	);
+
+	--font-size-hero: 5rem;
+	--font-size-large: 1.5rem;
+	--font-size-medium: 1.25rem;
+	--font-size-small: 1rem;
+
+	--font-weight-hero: 900;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	background: linear-gradient(
+		to bottom,
+		var(--color-subtle-top) 0%,
+		var(--color-background) 10%,
+		var(--color-background) 90%,
+		var(--color-subtle-bottom) 100%
+	);
+	max-width: 100vw;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
