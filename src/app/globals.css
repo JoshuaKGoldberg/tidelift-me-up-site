@@ -13,9 +13,6 @@
 	--color-subtle-top: #ddfbff;
 	--color-text-shadow: rgba(0, 7, 7, 0.25);
 
-	/* Todo: convert to a gradient for borders? */
-	--colors-border-bold: var(--color-bold-top);
-
 	--colors-background-bold: linear-gradient(
 		to bottom,
 		var(--color-bold-top),

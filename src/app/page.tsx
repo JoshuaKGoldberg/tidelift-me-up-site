@@ -40,7 +40,7 @@ export default async function Home({ searchParams }: HomeProps) {
 					Josh Goldberg
 				</a>{" "}
 				and{" "}
-				<a href="TODO" target="_blank">
+				<a href="https://kgrayson.com" target="_blank">
 					Kathryn Grayson Nanz
 				</a>
 				.
