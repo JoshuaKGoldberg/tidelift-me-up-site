@@ -5,8 +5,10 @@ module.exports = {
 		node: true,
 	},
 	extends: [
+		// TODO: Why isn't this loading?
+		// "next/core-web-vitals",
+
 		"eslint:recommended",
-		"next/core-web-vitals",
 		"plugin:eslint-comments/recommended",
 		"plugin:n/recommended",
 		"plugin:perfectionist/recommended-natural",
