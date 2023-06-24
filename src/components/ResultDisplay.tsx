@@ -36,7 +36,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 
 	return (
 		<ResultsContainer heading={`${counted(result.length, "Package")} Found`}>
-			<div>(tidying this up is WIP)</div>
+			<em>(tidying this up is WIP - coming soon!)</em>
 			{(
 				[
 					[result.filter((result) => !result.lifted), "Not Yet Lifted"],
