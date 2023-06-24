@@ -9,8 +9,6 @@ export interface ResultDisplayProps {
 }
 
 export function ResultDisplay({ result }: ResultDisplayProps) {
-	result = [];
-
 	if (!result) {
 		return null;
 	}
