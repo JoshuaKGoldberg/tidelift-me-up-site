@@ -1,11 +1,12 @@
-import "./globals.css";
 import { Raleway } from "next/font/google";
+
+import "./globals.css";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "Tidelift Me Up",
 	description: "Find your npm packages eligible for Tidelift funding. 💸",
+	title: "Tidelift Me Up",
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {

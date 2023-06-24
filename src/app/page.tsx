@@ -1,9 +1,10 @@
-import { PackageEstimate, tideliftMeUp } from "tidelift-me-up";
 import { PackageOwnership } from "tidelift-me-up";
+import { PackageEstimate, tideliftMeUp } from "tidelift-me-up";
+
+import { OptionsForm } from "~/components/OptionsForm";
+import { ResultDisplay } from "~/components/ResultDisplay";
 
 import styles from "./page.module.css";
-import { ResultDisplay } from "~/components/ResultDisplay";
-import { OptionsForm } from "~/components/OptionsForm";
 
 export interface HomeProps {
 	searchParams: Record<string, unknown>;
@@ -11,9 +12,9 @@ export interface HomeProps {
 
 export default async function Home({ searchParams }: HomeProps) {
 	const options = {
-		username: searchParams["username"] as string,
-		since: (searchParams["since"] || undefined) as string | undefined,
 		ownership: searchParams["ownership"] as PackageOwnership[],
+		since: (searchParams["since"] || undefined) as string | undefined,
+		username: searchParams["username"] as string,
 	};
 	let result: Error | PackageEstimate[] | undefined;
 

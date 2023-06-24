@@ -1,4 +1,5 @@
 import { PackageOwnership } from "tidelift-me-up";
+
 import styles from "./OptionsForm.module.css";
 
 export interface FormOptions {
@@ -61,8 +62,8 @@ export function OptionsForm({ options }: OptionsFormProps) {
 										<input
 											defaultChecked={ownerships.has(ownershipForm)}
 											id={ownershipForm}
-											type="checkbox"
 											name={ownershipForm}
+											type="checkbox"
 										/>
 										<label htmlFor={ownershipForm}>
 											{upperFirst(ownershipForm)}

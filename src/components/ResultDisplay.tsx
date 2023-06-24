@@ -1,9 +1,8 @@
 import { PackageEstimate } from "tidelift-me-up";
 
-import { ResultsContainer } from "./ResultsContainer";
 import { Estimate } from "./Estimate";
-
 import styles from "./ResultDisplay.module.css";
+import { ResultsContainer } from "./ResultsContainer";
 
 export interface ResultDisplayProps {
 	result: Error | PackageEstimate[] | undefined;
