@@ -12,11 +12,6 @@ https://github.com/wayfair/rainbow-sprinkles/issues/148
 	-webkit-font-smoothing: antialiased;
 }
 
-:is(.main, .footer) a {
-	color: var(--color-foreground-bold);
-	/* todo: underline? */
-}
-
 .main {
 	align-items: center;
 	display: flex;
@@ -25,15 +20,18 @@ https://github.com/wayfair/rainbow-sprinkles/issues/148
 }
 
 .h1 {
-	/* Todo: give a nice little gradient accent */
-	/* color: var(--colors-text-bold); */
-
-	color: var(--color-foreground-bold);
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(
+		to bottom,
+		var(--color-bold-top),
+		var(--color-bold-bottom) 50%
+	);
+	background-clip: text;
 	font-size: var(--font-size-hero);
 	font-weight: var(--font-weight-hero);
 	text-align: center;
 	line-height: 0.75;
-	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 
 .p {

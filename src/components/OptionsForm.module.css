@@ -46,7 +46,7 @@
 
 .inputPrimary,
 .inputSecondary {
-	background: white;
+	background: var(--color-background);
 	border: 1px solid var(--colors-border-bold);
 	bottom: 1px;
 	left: 1px;
@@ -67,7 +67,7 @@
 	color: var(--color-background);
 	font-weight: bold;
 	font-size: var(--font-size-medium);
-	text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+	text-shadow: 0 0 5px var(--color-shadow);
 	cursor: pointer;
 	display: flex;
 	align-items: center;
