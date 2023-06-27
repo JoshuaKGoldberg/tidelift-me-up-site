@@ -45,8 +45,15 @@
 
 .inputPrimary,
 .inputSecondary {
-	background: var(--color-background);
-	border: 1px solid var(--color-bold-top);
+	background-clip: padding-box, border-box;
+	background-image: linear-gradient(
+			var(--color-background),
+			var(--color-background)
+		),
+		var(--colors-background-bold);
+	background-origin: border-box;
+	border-radius: var(--border-radius-large);
+	border: double 1px transparent;
 	bottom: 1px;
 	color: inherit;
 	left: 1px;
