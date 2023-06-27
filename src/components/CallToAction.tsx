@@ -1,5 +1,3 @@
-/* eslint-disable eslint-comments/disable-enable-pair, no-undef, no-redeclare -- TODO: fix JSX/React shenanigans */
-
 import clsx from "clsx";
 
 import styles from "./CallToAction.module.css";

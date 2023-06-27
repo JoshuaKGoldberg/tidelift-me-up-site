@@ -1,13 +1,12 @@
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/prepare
-      - run: pnpm tsc || true
-      - run: pnpm lint
+      - run: pnpm tsc
 
-name: Lint
+name: Build
 
 on:
   pull_request: ~

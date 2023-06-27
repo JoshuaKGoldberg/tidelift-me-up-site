@@ -5,11 +5,10 @@ module.exports = {
 		node: true,
 	},
 	extends: [
-		// TODO: Why isn't this loading?
-		// "next/core-web-vitals",
-
 		"eslint:recommended",
+		// "next/core-web-vitals",
 		"plugin:eslint-comments/recommended",
+		"plugin:jsx-a11y/recommended",
 		"plugin:n/recommended",
 		"plugin:perfectionist/recommended-natural",
 		"plugin:regexp/recommended",
@@ -26,7 +25,7 @@ module.exports = {
 				"plugin:jsdoc/recommended-typescript-error",
 				"plugin:@typescript-eslint/recommended",
 			],
-			files: ["**/*.ts"],
+			files: ["**/*.ts", "**/*.tsx"],
 			parser: "@typescript-eslint/parser",
 			rules: {
 				// These off-by-default rules work well for this repo and we like them on.
@@ -101,6 +100,7 @@ module.exports = {
 		"deprecation",
 		"import",
 		"jsdoc",
+		"jsx-a11y",
 		"perfectionist",
 		"regexp",
 	],
