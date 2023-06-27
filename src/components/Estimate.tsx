@@ -38,7 +38,7 @@ export function Estimate({ estimatedPackage }: EstimateProps) {
 						Lifted
 					</Anchor>
 				) : (
-					<CallToAction as="a" href={href}>
+					<CallToAction as="a" href={href} target="_blank">
 						Ready to Lift
 					</CallToAction>
 				)}
