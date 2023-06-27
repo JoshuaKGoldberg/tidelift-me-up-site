@@ -1,0 +1,5 @@
+footer.footer {
+	color: var(--color-bold-bottom);
+	margin: clamp(5rem, 7.5vw, 7.5rem) auto 2.5rem;
+	text-align: center;
+}
