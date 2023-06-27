@@ -5,15 +5,29 @@
   "contributors": [
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
-      "contributions": ["tool"],
+      "contributions": [
+        "tool",
+        "design"
+      ],
       "login": "JoshuaKGoldberg",
       "name": "Josh Goldberg",
       "profile": "http://www.joshuakgoldberg.com"
+    },
+    {
+      "login": "kathryngraysonnanz",
+      "name": "Kathryn Grayson Nanz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61242943?v=4",
+      "profile": "https://github.com/kathryngraysonnanz",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": true,
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "imageSize": 100,
   "projectName": "tidelift-me-up-site",
   "projectOwner": "JoshuaKGoldberg",
