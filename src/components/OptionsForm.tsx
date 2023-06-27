@@ -26,6 +26,7 @@ export function OptionsForm({ options }: OptionsFormProps) {
 					<input
 						className={styles.inputPrimary}
 						defaultValue={options.username}
+						id="username"
 						name="username"
 						required
 						type="text"
@@ -47,6 +48,7 @@ export function OptionsForm({ options }: OptionsFormProps) {
 						<input
 							className={styles.inputSecondary}
 							defaultValue={options.since && options.since.toString()}
+							id="since"
 							name="since"
 							type="date"
 						></input>
