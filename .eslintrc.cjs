@@ -7,6 +7,7 @@ module.exports = {
 	extends: [
 		"eslint:recommended",
 		// "next/core-web-vitals",
+		"plugin:@next/next/core-web-vitals",
 		"plugin:eslint-comments/recommended",
 		"plugin:jsx-a11y/recommended",
 		"plugin:n/recommended",
