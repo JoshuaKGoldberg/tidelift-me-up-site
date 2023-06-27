@@ -1,6 +1,7 @@
-import { EstimatedPackage, tideliftMeUp } from "tidelift-me-up";
 import { PackageOwnership } from "tidelift-me-up";
+import { EstimatedPackage, tideliftMeUp } from "tidelift-me-up";
 
+import { Anchor } from "~/components/Anchor";
 import { MainArea } from "~/components/MainArea";
 import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
@@ -37,29 +38,29 @@ export default async function Home({ searchParams }: HomeProps) {
 			</MainArea>
 			<MainArea as="footer" className={styles.footer}>
 				Designed with 💙 by{" "}
-				<a href="https://joshuakgoldberg.com" target="_blank">
+				<Anchor href="https://joshuakgoldberg.com" target="_blank">
 					Josh Goldberg
-				</a>{" "}
+				</Anchor>{" "}
 				and{" "}
-				<a href="https://kgrayson.com" target="_blank">
+				<Anchor href="https://kgrayson.com" target="_blank">
 					Kathryn Grayson Nanz
-				</a>
+				</Anchor>
 				.
 				<br />
 				<br />
-				<a
+				<Anchor
 					href="https://github.com/JoshuaKGoldberg/tidelift-me-up"
 					target="_blank"
 				>
 					CLI repo
-				</a>{" "}
+				</Anchor>{" "}
 				/{" "}
-				<a
+				<Anchor
 					href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site"
 					target="_blank"
 				>
 					Website repo
-				</a>
+				</Anchor>
 			</MainArea>
 		</>
 	);
