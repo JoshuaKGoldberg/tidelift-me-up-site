@@ -40,7 +40,6 @@
 
 .inputPrimary,
 .submit {
-	border-radius: var(--border-radius-large);
 	height: 3rem;
 }
 
@@ -62,16 +61,7 @@
 }
 
 .submit {
-	background: var(--colors-background-bold);
-	border: none;
-	color: var(--color-background);
-	font-weight: bold;
 	font-size: var(--font-size-medium);
-	text-shadow: 0 0 5px var(--color-shadow);
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	width: 35%;
 }
 

@@ -1,0 +1,8 @@
+.mainArea {
+	color: var(--color-foreground);
+	max-width: 50rem;
+	padding: 0 var(--spacing-main-area);
+	margin: 0 auto;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}

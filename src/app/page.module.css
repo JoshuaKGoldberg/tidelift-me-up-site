@@ -3,15 +3,6 @@ Todo: I'll probably switch this to rainbow-sprinkles, pending...
 https://github.com/wayfair/rainbow-sprinkles/issues/148
 */
 
-.main,
-.footer {
-	color: var(--color-foreground);
-	max-width: 50rem;
-	padding: 0 2.5rem;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-}
-
 .main {
 	align-items: center;
 	display: flex;
@@ -42,6 +33,6 @@ https://github.com/wayfair/rainbow-sprinkles/issues/148
 
 .footer {
 	color: var(--color-bold-bottom);
-	margin: clamp(2.5rem, 5vw, 5rem) auto 2.5rem;
+	margin: clamp(5rem, 7.5vw, 7.5rem) auto 2.5rem;
 	text-align: center;
 }

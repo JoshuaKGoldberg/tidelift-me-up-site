@@ -1,5 +1,6 @@
 import { PackageOwnership } from "tidelift-me-up";
 
+import { CallToAction } from "./CallToAction";
 import styles from "./OptionsForm.module.css";
 
 export interface FormOptions {
@@ -31,9 +32,9 @@ export function OptionsForm({ options }: OptionsFormProps) {
 					></input>
 				</div>
 
-				<button className={styles.submit} type="submit">
+				<CallToAction as="button" className={styles.submit} type="submit">
 					Search
-				</button>
+				</CallToAction>
 			</div>
 
 			<div className={styles.secondaryOptionsArea}>

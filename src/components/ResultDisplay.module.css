@@ -1,9 +1,20 @@
 .estimates {
-	list-style-type: none;
-	display: flex;
-	gap: 1rem;
-	flex-direction: column;
-	margin-top: 1rem;
+	border-spacing: 0 1.5rem;
+	margin-top: 1.5rem;
+	width: 100%;
+}
+
+.th {
+	font-weight: normal;
+	font-style: italic;
+}
+
+.th:first-of-type {
+	text-align: left;
+}
+
+.th:not(.th:first-of-type) {
+	text-align: center;
 }
 
 .p {
@@ -16,13 +27,4 @@
 	border: 1px solid var(--color-foreground);
 	padding: 1rem;
 	overflow: auto;
-}
-
-.section {
-	margin: 3rem 0 1.5rem;
-}
-
-.subHeading {
-	margin-bottom: 2rem;
-	text-align: center;
 }

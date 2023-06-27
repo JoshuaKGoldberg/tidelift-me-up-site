@@ -1,23 +1,48 @@
-import { PackageEstimate } from "tidelift-me-up";
+import { EstimatedPackage } from "tidelift-me-up";
 
+import { Anchor } from "./Anchor";
+import { CallToAction } from "./CallToAction";
 import styles from "./Estimate.module.css";
 
 export interface EstimateProps {
-	data: PackageEstimate;
+	estimatedPackage: EstimatedPackage;
 }
 
-export function Estimate({ data }: EstimateProps) {
+export function Estimate({ estimatedPackage }: EstimateProps) {
+	const {
+		data: { description },
+		estimatedMoney,
+		lifted,
+		name,
+	} = estimatedPackage;
+	const href = `https://tidelift.com/lifter/search/npm/${name}`;
+
 	return (
-		<li className={styles.estimate}>
-			<a
-				className={styles.name}
-				href={`https://www.npmjs.com/package/${data.name}`}
-				target="_blank"
-			>
-				{data.name}
-			</a>
-			<div className={styles.money}>~${data.estimatedMoney}</div>
-			<div className={styles.lifted}>{data.lifted ? "yay" : "ooh"}</div>
-		</li>
+		<tr className={styles.estimate}>
+			<td className={styles.nameCell}>
+				<Anchor
+					className={styles.name}
+					href={`https://www.npmjs.com/package/${name}`}
+					target="_blank"
+				>
+					{name}
+				</Anchor>
+				<em className={styles.description}>{description}</em>
+			</td>
+			<td className={styles.moneyCell}>
+				<div>~${Math.round(estimatedMoney)}</div>
+			</td>
+			<td className={styles.liftedCell}>
+				{lifted ? (
+					<Anchor href={href} target="_blank">
+						Lifted
+					</Anchor>
+				) : (
+					<CallToAction as="a" href={href}>
+						Ready to Lift
+					</CallToAction>
+				)}
+			</td>
+		</tr>
 	);
 }

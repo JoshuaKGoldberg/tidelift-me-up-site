@@ -1,6 +1,7 @@
+import { EstimatedPackage, tideliftMeUp } from "tidelift-me-up";
 import { PackageOwnership } from "tidelift-me-up";
-import { PackageEstimate, tideliftMeUp } from "tidelift-me-up";
 
+import { MainArea } from "~/components/MainArea";
 import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
 
@@ -16,7 +17,7 @@ export default async function Home({ searchParams }: HomeProps) {
 		since: (searchParams["since"] || undefined) as string | undefined,
 		username: searchParams["username"] as string,
 	};
-	let result: Error | PackageEstimate[] | undefined;
+	let result: Error | EstimatedPackage[] | undefined;
 
 	try {
 		result = options.username ? await tideliftMeUp(options) : undefined;
@@ -26,15 +27,15 @@ export default async function Home({ searchParams }: HomeProps) {
 
 	return (
 		<>
-			<main className={styles.main}>
+			<MainArea as="main" className={styles.main}>
 				<h1 className={styles.h1}>tidelift-me-up</h1>
 				<p className={styles.p}>
 					Find your npm packages eligible for Tidelift funding 💸
 				</p>
 				<OptionsForm options={options} />
 				<ResultDisplay result={result} />
-			</main>
-			<footer className={styles.footer}>
+			</MainArea>
+			<MainArea as="footer" className={styles.footer}>
 				Designed with 💙 by{" "}
 				<a href="https://joshuakgoldberg.com" target="_blank">
 					Josh Goldberg
@@ -59,7 +60,7 @@ export default async function Home({ searchParams }: HomeProps) {
 				>
 					Website repo
 				</a>
-			</footer>
+			</MainArea>
 		</>
 	);
 }

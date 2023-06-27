@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  clsx:
+    specifier: ^1.2.1
+    version: 1.2.1
   next:
     specifier: ^13.4.7
     version: 13.4.7(react-dom@18.2.0)(react@18.2.0)
@@ -15,8 +18,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   tidelift-me-up:
-    specifier: ^0.1.6
-    version: 0.1.6
+    specifier: ^0.1.7
+    version: 0.1.7
 
 devDependencies:
   '@types/eslint':
@@ -1350,6 +1353,11 @@ packages:
     engines: {node: '>=0.8'}
     dev: true
     optional: true
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -4151,8 +4159,8 @@ packages:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
 
-  /tidelift-me-up@0.1.6:
-    resolution: {integrity: sha512-7Df3rBAIqAYVkBy1bb6M2CgadSdyBZd2ELdXtMe6FMJYnVWhf4pXFBDD8qwoCh4G6TR84RDsyKGTLsFG1CR/ug==}
+  /tidelift-me-up@0.1.7:
+    resolution: {integrity: sha512-l65EY0DT5Ce1Lb5b26u6e6qGB0hAkIWv8nVL7g2UeKtHSjXfafGHEFUeJGm9PSv73L13xyT7i0SzDamU4mxmmg==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:

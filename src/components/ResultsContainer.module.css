@@ -1,9 +1,11 @@
 .resultsContainer {
-	margin: 2rem 1rem 0;
+	margin: clamp(1rem, 10vw, 5rem) var(--spacing-main-area) 0;
+	max-width: var(--width-main-area);
+	width: 100%;
 }
 
 .h3 {
 	font-size: var(--font-size-large);
-	margin: 2rem 1rem 1rem;
+	margin: 1rem;
 	text-align: center;
 }

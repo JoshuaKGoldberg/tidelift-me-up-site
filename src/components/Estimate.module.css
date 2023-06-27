@@ -1,13 +1,29 @@
 .estimate {
 	width: 100%;
+}
+
+.estimate td:not(:first-of-type):not(:last-of-type) {
+	padding: 0 clamp(0.15rem, 2.5vw, 2rem);
+}
+
+.nameCell {
+	align-items: flex-start;
 	display: flex;
+	flex-direction: column;
+	gap: clamp(0.25rem, 1.5vw, 0.5rem);
+	flex-wrap: wrap;
+	max-width: 40vw;
+}
+
+.description {
+	font-size: var(--font-size-smaller);
 }
 
 .name {
 	font-weight: bold;
-	width: 60%;
 }
 
-.money {
-	width: 30%;
+.moneyCell,
+.liftedCell {
+	text-align: center;
 }

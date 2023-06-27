@@ -2,13 +2,13 @@
 	--border-radius-medium: 0.25rem;
 	--border-radius-large: 0.5rem;
 
-	--color-background: white;
+	--color-background: #fdfafa;
 	--color-foreground: #073535;
 	--color-foreground-bold: #142121;
 	--color-foreground-accent: #122c22;
 	--color-bold-behind: #1ebcc5;
 	--color-bold-bottom: #0e4c3c;
-	--color-bold-top: #09949c;
+	--color-bold-top: #035e63;
 	--color-subtle-bottom: #e9fff2;
 	--color-subtle-top: #ddfbff;
 	--color-text-shadow: rgba(0, 7, 7, 0.25);
@@ -29,19 +29,24 @@
 	--font-size-large: 1.5rem;
 	--font-size-medium: 1.25rem;
 	--font-size-small: 1rem;
+	--font-size-smaller: 0.85rem;
 
 	--font-weight-hero: 900;
+
+	--spacing-main-area: clamp(1rem, 5vw, 2.5rem);
+
+	--width-main-area: 35rem;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-background: #000707;
+		--color-background: #071414;
 		--color-foreground: #c0ffff;
 		--color-foreground-bold: #86dbdb;
 		--color-foreground-accent: #5ce1ae;
 		--color-bold-behind: #108187;
-		--color-bold-bottom: #10bfc8;
-		--color-bold-top: #64ffd8;
+		--color-bold-bottom: #0fd9e4;
+		--color-bold-top: #73dfc4;
 		--color-subtle-bottom: #01140d;
 		--color-subtle-top: #011d22;
 		--color-text-shadow: rgba(255, 245, 245, 0.25);
@@ -69,23 +74,6 @@ body {
 		var(--color-background) 90%,
 		var(--color-subtle-bottom) 100%
 	);
-}
-
-a {
-	color: inherit;
-	display: inline-block;
-	position: relative;
-	text-decoration: none;
-}
-
-a::before {
-	content: "";
-	width: 100%;
-	height: 1px;
-	background: var(--color-bold-behind);
-	position: absolute;
-	bottom: 0;
-	left: 0;
 }
 
 @media (prefers-color-scheme: dark) {
