@@ -23,17 +23,7 @@
     <img alt="TypeScript: Strict" src="https://img.shields.io/badge/typescript-strict-21bb42.svg" />
 </p>
 
-## Usage
-
-```shell
-npm i tidelift-me-up-site
-```
-
-```ts
-import { greet } from "tidelift-me-up-site";
-
-greet("Hello, world!");
-```
+👉 <https://tidelift-me-up-site.vercel.app>
 
 ## Development
 
