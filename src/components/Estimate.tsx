@@ -15,7 +15,7 @@ export function Estimate({ estimatedPackage }: EstimateProps) {
 		lifted,
 		name,
 	} = estimatedPackage;
-	const href = `https://tidelift.com/lifter/search/npm/${name}`;
+	const href = `https://tidelift.com/lifter/search/npm/${encodeURIComponent(name)}`;
 
 	return (
 		<tr className={styles.estimate}>
