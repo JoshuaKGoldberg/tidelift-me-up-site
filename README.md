@@ -41,7 +41,7 @@ Thanks! 💖
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a> <a href="#design-JoshuaKGoldberg" title="Design">🎨</a> <a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues?q=author%3AJoshuaKGoldberg" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a> <a href="#design-JoshuaKGoldberg" title="Design">🎨</a> <a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues?q=author%3AJoshuaKGoldberg" title="Bug reports">🐛</a> <a href="#maintenance-JoshuaKGoldberg" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kathryngraysonnanz"><img src="https://avatars.githubusercontent.com/u/61242943?v=4?s=100" width="100px;" alt="Kathryn Grayson Nanz"/><br /><sub><b>Kathryn Grayson Nanz</b></sub></a><br /><a href="#design-kathryngraysonnanz" title="Design">🎨</a></td>
     </tr>
   </tbody>
