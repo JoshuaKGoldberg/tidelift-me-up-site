@@ -5,6 +5,7 @@ import { Footer } from "~/components/Footer";
 import { MainArea } from "~/components/MainArea";
 import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
+import { ScrollButton } from "~/components/ScrollButton";
 
 import styles from "./page.module.css";
 
@@ -35,6 +36,7 @@ export default async function Home({ searchParams }: HomeProps) {
 				</p>
 				<OptionsForm options={options} />
 				<ResultDisplay result={result} />
+				<ScrollButton />
 			</MainArea>
 			<Footer />
 		</>
