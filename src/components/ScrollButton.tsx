@@ -16,7 +16,7 @@ export function ScrollButton() {
 			type="button"
 			// style={{ display: visible ? "inline" : "none" }}
 		>
-			⬆️
+			Back to Top⬆
 		</button>
 	);
 }
