@@ -36,8 +36,8 @@ export default async function Home({ searchParams }: HomeProps) {
 				</p>
 				<OptionsForm options={options} />
 				<ResultDisplay result={result} />
-				<ScrollButton />
 			</MainArea>
+			<ScrollButton />
 			<Footer />
 		</>
 	);
