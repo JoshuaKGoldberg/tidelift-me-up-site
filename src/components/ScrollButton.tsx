@@ -1,11 +1,15 @@
 "use client";
 
 export function ScrollButton() {
-	const scrollToTop = () => {
+	const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+		e.preventDefault();
 		console.log("wheeeee", window);
+		const href = e.currentTarget.href;
+		const targetID = href.replace(/.*#/, "");
+		const elem = document.getElementById(targetID);
 		window.scrollTo({
 			behavior: "smooth",
-			left: 0,
+
 			top: 0,
 		});
 	};
