@@ -1,26 +1,28 @@
 "use client";
 
-export function ScrollButton() {
-	const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-		e.preventDefault();
-		console.log("wheeeee", window);
-		const href = e.currentTarget.href;
-		const targetID = href.replace(/.*#/, "");
-		const elem = document.getElementById(targetID);
-		window.scrollTo({
-			behavior: "smooth",
+import Link from "next/link";
 
-			top: 0,
-		});
-	};
+export function ScrollButton() {
+	// const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+	// 	e.preventDefault();
+	// 	const href = e.currentTarget.href;
+	// 	const targetID = href.replace(/.*#/, "");
+	// 	const elem = document.getElementById(targetID);
+	// 	window.scrollTo({
+	// 		top: elem?.getBoundingClientRect().top,
+	// 		// eslint-disable-next-line perfectionist/sort-objects
+	// 		behavior: "smooth",
+	// 	});
+	// };
 
 	return (
-		<button
-			onClick={scrollToTop}
+		<Link
+			href="#title"
+			// onClick={scrollToTop}
 			type="button"
 			// style={{ display: visible ? "inline" : "none" }}
 		>
 			Back to Top⬆
-		</button>
+		</Link>
 	);
 }
