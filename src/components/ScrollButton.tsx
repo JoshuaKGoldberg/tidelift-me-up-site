@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import styles from "./ScrollButton.module.css";
+
 export function ScrollButton() {
 	const [visible, setVisible] = useState(false);
 
@@ -27,6 +29,7 @@ export function ScrollButton() {
 
 	return (
 		<button
+			className={styles.scrollButton}
 			onClick={scrollToTop}
 			style={{ display: visible ? "inline" : "none" }}
 			type="button"
