@@ -11,10 +11,8 @@ export function ScrollButton() {
 		const scrolled = document.body.scrollTop;
 		if (scrolled > 100) {
 			setVisible(true);
-			console.log("we be scrolling", scrolled);
 		} else if (scrolled <= 100) {
 			setVisible(false);
-			console.log("no scroll", scrolled);
 		}
 	};
 
