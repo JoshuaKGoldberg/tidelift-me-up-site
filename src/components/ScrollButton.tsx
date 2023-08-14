@@ -9,11 +9,13 @@ export function ScrollButton() {
 
 	const toggleVisible = () => {
 		const scrolled = document.body.scrollTop;
-		if (scrolled > 100) {
-			setVisible(true);
-		} else if (scrolled <= 100) {
-			setVisible(false);
-		}
+		setVisible(scrolled > 100);
+		// scrolled > 100 ? setVisible(true) : setVisible(false)
+		// if (scrolled > 100) {
+		// 	setVisible(true);
+		// } else if (scrolled <= 100) {
+		// 	setVisible(false);
+		// }
 	};
 
 	const scrollToTop = () => {
@@ -23,13 +25,14 @@ export function ScrollButton() {
 		});
 	};
 
-	document.body.addEventListener("scroll", toggleVisible);
+	// document.body.addEventListener("scroll", toggleVisible);
+	document.body.addEventListener("scroll", toggleVisible, { passive: true });
 
 	return (
 		<button
 			className={styles.scrollButton}
 			onClick={scrollToTop}
-			style={{ display: visible ? "inline" : "none" }}
+			style={{ display: visible ? "flex" : "none" }}
 			type="button"
 		>
 			Back to Top⬆

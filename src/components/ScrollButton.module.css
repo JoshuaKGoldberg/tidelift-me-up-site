@@ -1,5 +1,6 @@
 .scrollButton {
 	position: fixed;
+	display: flex;
 	bottom: 40px;
 	right: 40px;
 	background: var(--colors-background-bold);
@@ -14,4 +15,13 @@
 	text-align: center;
 	text-decoration: none;
 	text-shadow: 0 0 5px var(--color-shadow);
+}
+
+@media screen and (width <= 870px) {
+	.scrollButton {
+		position: fixed;
+		bottom: 40px;
+		right: 45%;
+		left: 45%;
+	}
 }
