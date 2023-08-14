@@ -17,11 +17,13 @@ export interface HomeProps {
 
 export default async function Home({ searchParams }: HomeProps) {
 	const options = {
-		ownership: [
-			searchParams["author"] === "on" && "author",
-			searchParams["maintainer"] === "on" && "maintainer",
-			searchParams["publisher"] === "on" && "publisher",
-		].filter(Boolean) as PackageOwnership[],
+		ownership: undefinedIfEmpty(
+			[
+				searchParams["author"] === "on" && "author",
+				searchParams["maintainer"] === "on" && "maintainer",
+				searchParams["publisher"] === "on" && "publisher",
+			].filter(Boolean) as PackageOwnership[]
+		),
 		since: (searchParams["since"] || undefined) as string | undefined,
 		username: searchParams["username"] as string,
 	};
@@ -46,4 +48,8 @@ export default async function Home({ searchParams }: HomeProps) {
 			<Footer />
 		</>
 	);
+}
+
+function undefinedIfEmpty<T>(items: T[]) {
+	return items.length === 0 ? undefined : items;
 }
