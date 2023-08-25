@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { useState } from "react";
 
 import styles from "./ScrollButton.module.css";
@@ -19,16 +20,17 @@ export function ScrollButton() {
 		});
 	};
 
-	document.body.addEventListener("scroll", toggleVisible, { passive: true });
+	if (typeof document !== "undefined") {
+		document.body.addEventListener("scroll", toggleVisible, { passive: true });
+	}
 
 	return (
 		<button
-			className={styles.scrollButton}
+			className={clsx(styles.scrollButton, visible && styles.visible)}
 			onClick={scrollToTop}
-			style={{ display: visible ? "flex" : "none" }}
 			type="button"
 		>
-			Back to Top⬆
+			Back to Top ⬆
 		</button>
 	);
 }
