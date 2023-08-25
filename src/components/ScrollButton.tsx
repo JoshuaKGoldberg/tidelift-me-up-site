@@ -10,12 +10,6 @@ export function ScrollButton() {
 	const toggleVisible = () => {
 		const scrolled = document.body.scrollTop;
 		setVisible(scrolled > 100);
-		// scrolled > 100 ? setVisible(true) : setVisible(false)
-		// if (scrolled > 100) {
-		// 	setVisible(true);
-		// } else if (scrolled <= 100) {
-		// 	setVisible(false);
-		// }
 	};
 
 	const scrollToTop = () => {
@@ -25,7 +19,6 @@ export function ScrollButton() {
 		});
 	};
 
-	// document.body.addEventListener("scroll", toggleVisible);
 	document.body.addEventListener("scroll", toggleVisible, { passive: true });
 
 	return (
