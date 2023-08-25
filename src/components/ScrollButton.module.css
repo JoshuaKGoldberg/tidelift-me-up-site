@@ -15,13 +15,17 @@
 	text-align: center;
 	text-decoration: none;
 	text-shadow: 0 0 5px var(--color-shadow);
+	z-index: 1;
+	display: none;
+}
+
+.visible {
+	display: flex;
 }
 
 @media screen and (width <= 870px) {
 	.scrollButton {
-		position: fixed;
-		bottom: 40px;
-		right: 40%;
 		left: 40%;
+		right: 40%;
 	}
 }

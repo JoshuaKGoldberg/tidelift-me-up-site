@@ -38,7 +38,6 @@ export default async function Home({ searchParams }: HomeProps) {
 
 	return (
 		<>
-			<ScrollButton />
 			<MainArea as="main" className={styles.main}>
 				<h1 className={styles.h1}>tidelift-me-up</h1>
 				<p className={styles.p}>
@@ -46,6 +45,7 @@ export default async function Home({ searchParams }: HomeProps) {
 				</p>
 				<OptionsForm options={options} />
 				<ResultDisplay result={result} />
+				<ScrollButton />
 			</MainArea>
 			<Footer />
 		</>
