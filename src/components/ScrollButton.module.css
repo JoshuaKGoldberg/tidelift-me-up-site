@@ -18,7 +18,7 @@
 	z-index: 1;
 	visibility: hidden;
 	opacity: 0;
-	transition: visibility 0s linear 0.35s, opacity 0.35s linear;
+	transition: visibility 0s linear 0.2s, opacity 0.2s linear;
 }
 
 .visible {
