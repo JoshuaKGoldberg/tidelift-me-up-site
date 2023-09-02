@@ -72,7 +72,7 @@ export function OptionsForm({ options }: OptionsFormProps) {
 											{upperFirst(ownershipForm)}
 										</label>
 									</div>
-								)
+								),
 							)}
 						</div>
 					</fieldset>
