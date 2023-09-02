@@ -20,6 +20,36 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "dsherret",
+      "name": "David Sherret",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1609021?v=4",
+      "profile": "http://stackoverflow.com/users/188246/david-sherret",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "jrachelr",
+      "name": "Rachel Johnson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101299667?v=4",
+      "profile": "https://www.racheldev.com/",
+      "contributions": [
+        "code",
+        "design",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "RuthwikReddy09",
+      "name": "Ruthwik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126862059?v=4",
+      "profile": "https://github.com/RuthwikReddy09",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

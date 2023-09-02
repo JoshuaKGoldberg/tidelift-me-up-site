@@ -1,0 +1,35 @@
+.scrollButton {
+	position: fixed;
+	display: flex;
+	bottom: 40px;
+	right: 40px;
+	background: var(--colors-background-bold);
+	border-radius: 4px;
+	border-radius: var(--border-radius-large);
+	border: none;
+	color: var(--color-background);
+	cursor: pointer;
+	font-weight: bold;
+	justify-content: center;
+	padding: 0.5rem 0.75rem;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 0 5px var(--color-shadow);
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+}
+
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+}
+
+@media screen and (width <= 870px) {
+	.scrollButton {
+		left: 40%;
+		right: 40%;
+	}
+}
