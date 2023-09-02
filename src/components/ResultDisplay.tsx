@@ -52,7 +52,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 									: b.estimatedMoney - a.estimatedMoney
 								: a.lifted
 								? 1
-								: -1
+								: -1,
 						)
 						.map((packageEstimate) => (
 							<Estimate
