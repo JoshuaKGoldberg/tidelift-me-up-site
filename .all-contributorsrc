@@ -6,7 +6,10 @@
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
       "contributions": [
-        "maintenance"
+        "maintenance",
+        "code",
+        "design",
+        "tool"
       ],
       "login": "JoshuaKGoldberg",
       "name": "Josh Goldberg",
