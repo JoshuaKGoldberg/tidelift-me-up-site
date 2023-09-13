@@ -35,6 +35,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 		<ResultsContainer
 			heading={`${counted(result.length, "Liftable Package")} Found`}
 		>
+			<p className={styles.p}>With a funding estimate of ${summed(result)}</p>
 			<table className={styles.estimates}>
 				<thead>
 					<tr>
@@ -52,7 +53,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 									: b.estimatedMoney - a.estimatedMoney
 								: a.lifted
 								? 1
-								: -1,
+								: -1
 						)
 						.map((packageEstimate) => (
 							<Estimate
@@ -68,4 +69,12 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 
 function counted(count: number, text: string) {
 	return `${count} ${text}${count === 1 ? "" : "s"}`;
+}
+
+function summed(result: EstimatedPackage[]) {
+	let total = 0;
+	result.forEach((num) => {
+		total += num.estimatedMoney;
+	});
+	return total;
 }
