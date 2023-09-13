@@ -35,7 +35,9 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 		<ResultsContainer
 			heading={`${counted(result.length, "Liftable Package")} Found`}
 		>
-			<p className={styles.p}>With a funding estimate of ${summed(result)}</p>
+			<p className={styles.p}>
+				With a funding estimate of <b>~${summed(result)}</b>
+			</p>
 			<table className={styles.estimates}>
 				<thead>
 					<tr>
@@ -76,5 +78,8 @@ function summed(result: EstimatedPackage[]) {
 	result.forEach((num) => {
 		total += num.estimatedMoney;
 	});
-	return total;
+	const formattedTotal = total.toLocaleString("en-US", {
+		maximumFractionDigits: 0,
+	});
+	return formattedTotal;
 }
