@@ -6,8 +6,10 @@
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
       "contributions": [
-        "tool",
-        "design"
+        "maintenance",
+        "code",
+        "design",
+        "tool"
       ],
       "login": "JoshuaKGoldberg",
       "name": "Josh Goldberg",
@@ -39,7 +41,17 @@
       "profile": "https://www.racheldev.com/",
       "contributions": [
         "code",
-        "design"
+        "design",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "RuthwikReddy09",
+      "name": "Ruthwik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126862059?v=4",
+      "profile": "https://github.com/RuthwikReddy09",
+      "contributions": [
+        "code"
       ]
     }
   ],

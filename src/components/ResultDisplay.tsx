@@ -39,6 +39,9 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 		<ResultsContainer
 			heading={`${counted(result.length, "Liftable Package")} Found`}
 		>
+			<p className={styles.p}>
+				With a funding estimate of <b>~${sumEstimateFunding(result)}</b>
+			</p>
 			<table className={styles.estimates}>
 				<thead>
 					<tr>
@@ -85,4 +88,13 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 
 function counted(count: number, text: string) {
 	return `${count} ${text}${count === 1 ? "" : "s"}`;
+}
+
+function sumEstimateFunding(packages: EstimatedPackage[]) {
+	const total = packages
+		.reduce((total, current) => total + current.estimatedMoney, 0)
+		.toLocaleString("en-US", {
+			maximumFractionDigits: 0,
+		});
+	return total;
 }

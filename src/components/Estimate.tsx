@@ -16,7 +16,7 @@ export function Estimate({ estimatedPackage }: EstimateProps) {
 		name,
 	} = estimatedPackage;
 	const href = `https://tidelift.com/lifter/search/npm/${encodeURIComponent(
-		name
+		name,
 	)}`;
 
 	return (
