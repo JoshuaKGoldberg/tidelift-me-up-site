@@ -73,8 +73,8 @@ function counted(count: number, text: string) {
 	return `${count} ${text}${count === 1 ? "" : "s"}`;
 }
 
-function sumEstimateFunding(result: EstimatedPackage[]) {
-	const total = result
+function sumEstimateFunding(packages: EstimatedPackage[]) {
+	const total = packages
 		.reduce((total, current) => total + current.estimatedMoney, 0)
 		.toLocaleString("en-US", {
 			maximumFractionDigits: 0,
