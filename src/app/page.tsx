@@ -23,10 +23,10 @@ export default async function Home({ searchParams }: HomeProps) {
 				searchParams["author"] === "on" && "author",
 				searchParams["maintainer"] === "on" && "maintainer",
 				searchParams["publisher"] === "on" && "publisher",
-			].filter(Boolean) as PackageOwnership[]
+			].filter(Boolean) as PackageOwnership[],
 		),
 		since: (searchParams["since"] || undefined) as string | undefined,
-		username: searchParams["username"] as string,
+		username: searchParams.username as string,
 	};
 	let result: Error | EstimatedPackage[] | undefined;
 
@@ -36,6 +36,7 @@ export default async function Home({ searchParams }: HomeProps) {
 		result = error as Error;
 	}
 
+	console.log(result);
 	return (
 		<>
 			<MainArea as="main" className={styles.main}>

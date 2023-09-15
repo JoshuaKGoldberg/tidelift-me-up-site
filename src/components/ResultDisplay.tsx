@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { EstimatedPackage } from "tidelift-me-up";
 
 import { Estimate } from "./Estimate";
@@ -9,6 +11,8 @@ export interface ResultDisplayProps {
 }
 
 export function ResultDisplay({ result }: ResultDisplayProps) {
+	const [sort, setSort] = useState("lifted");
+
 	if (!result) {
 		return null;
 	}
@@ -38,22 +42,35 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 			<table className={styles.estimates}>
 				<thead>
 					<tr>
-						<th className={styles.th}>Package Name</th>
-						<th className={styles.th}>Estimate</th>
-						<th className={styles.th}>Status</th>
+						<th className={styles.th}>
+							Package Name
+							<button onClick={() => setSort("name")}>click me!</button>
+						</th>
+						<th className={styles.th}>
+							Estimate
+							<button onClick={() => setSort("estimate")}>click me!</button>
+						</th>
+						<th className={styles.th}>
+							Status
+							<button onClick={() => setSort("lifted")}>click me!</button>
+						</th>
 					</tr>
 				</thead>
 				<tbody>
 					{result
-						.sort((a, b) =>
-							a.lifted === b.lifted
+						.sort((a, b) => {
+							if (sort === "name") {
+								return a.name.localeCompare(b.name);
+							}
+
+							return a.lifted === b.lifted
 								? a.estimatedMoney === b.estimatedMoney
 									? a.name.localeCompare(b.name)
 									: b.estimatedMoney - a.estimatedMoney
 								: a.lifted
 								? 1
-								: -1
-						)
+								: -1;
+						})
 						.map((packageEstimate) => (
 							<Estimate
 								estimatedPackage={packageEstimate}
