@@ -36,7 +36,6 @@ export default async function Home({ searchParams }: HomeProps) {
 		result = error as Error;
 	}
 
-	console.log(result);
 	return (
 		<>
 			<MainArea as="main" className={styles.main}>

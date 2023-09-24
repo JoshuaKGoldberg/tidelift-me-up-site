@@ -11,7 +11,8 @@ export interface ResultDisplayProps {
 }
 
 export function ResultDisplay({ result }: ResultDisplayProps) {
-	const [sort, setSort] = useState("lifted");
+	const [sort, setSort] = useState("lifted"); //state for columns(map key)
+	// const [order, setOrder] = useState("ascending");
 
 	if (!result) {
 		return null;
@@ -66,6 +67,20 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								return a.name.localeCompare(b.name);
 							}
 
+							if (sort === "estimate") {
+								return a.estimatedMoney > b.estimatedMoney ? 1 : -1;
+							}
+
+							if (sort === "lifted") {
+								return a.lifted === b.lifted
+									? a.estimatedMoney === b.estimatedMoney
+										? a.name.localeCompare(b.name)
+										: b.estimatedMoney - a.estimatedMoney
+									: a.lifted
+									? 1
+									: -1;
+							}
+
 							return a.lifted === b.lifted
 								? a.estimatedMoney === b.estimatedMoney
 									? a.name.localeCompare(b.name)
@@ -98,3 +113,5 @@ function sumEstimateFunding(packages: EstimatedPackage[]) {
 		});
 	return total;
 }
+
+// todo: figure out ascending & descending
