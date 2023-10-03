@@ -11,9 +11,6 @@ export interface ResultDisplayProps {
 }
 
 export function ResultDisplay({ result }: ResultDisplayProps) {
-	const [sort, setSort] = useState("lifted"); //state for columns(map key)
-	// const [order, setOrder] = useState("ascending");
-
 	if (!result) {
 		return null;
 	}
@@ -36,6 +33,18 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 		);
 	}
 
+	const [sort, setSort] = useState<"estimate" | "lifted" | "name">();
+	const [order, setOrder] = useState<"ascending" | "descending">("ascending");
+
+	function setSortAndOrder(received: typeof sort) {
+		if (received === sort) {
+			setOrder(order === "ascending" ? "descending" : "ascending");
+		} else {
+			setSort(received);
+			setOrder("ascending");
+		}
+	}
+
 	return (
 		<ResultsContainer
 			heading={`${counted(result.length, "Liftable Package")} Found`}
@@ -48,46 +57,46 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 					<tr>
 						<th className={styles.th}>
 							Package Name
-							<button onClick={() => setSort("name")}>click me!</button>
+							<button onClick={() => setSortAndOrder("name")}>Sort</button>
 						</th>
 						<th className={styles.th}>
 							Estimate
-							<button onClick={() => setSort("estimate")}>click me!</button>
+							<button onClick={() => setSortAndOrder("estimate")}>Sort</button>
 						</th>
 						<th className={styles.th}>
 							Status
-							<button onClick={() => setSort("lifted")}>click me!</button>
+							<button onClick={() => setSortAndOrder("lifted")}>Sort</button>
 						</th>
 					</tr>
 				</thead>
 				<tbody>
 					{result
 						.sort((a, b) => {
-							if (sort === "name") {
-								return a.name.localeCompare(b.name);
+							let compared: number;
+
+							switch (sort) {
+								case "estimate":
+									compared = a.estimatedMoney - b.estimatedMoney;
+									break;
+								case "name":
+									compared = a.name.localeCompare(b.name);
+									break;
+								case "lifted":
+									compared = a.lifted ? (b.lifted ? 0 : -1) : b.lifted ? 1 : 0;
+									break;
+								case undefined:
+									compared =
+										a.lifted === b.lifted
+											? a.estimatedMoney === b.estimatedMoney
+												? a.name.localeCompare(b.name)
+												: b.estimatedMoney - a.estimatedMoney
+											: a.lifted
+											? 1
+											: -1;
+									break;
 							}
 
-							if (sort === "estimate") {
-								return a.estimatedMoney > b.estimatedMoney ? 1 : -1;
-							}
-
-							if (sort === "lifted") {
-								return a.lifted === b.lifted
-									? a.estimatedMoney === b.estimatedMoney
-										? a.name.localeCompare(b.name)
-										: b.estimatedMoney - a.estimatedMoney
-									: a.lifted
-									? 1
-									: -1;
-							}
-
-							return a.lifted === b.lifted
-								? a.estimatedMoney === b.estimatedMoney
-									? a.name.localeCompare(b.name)
-									: b.estimatedMoney - a.estimatedMoney
-								: a.lifted
-								? 1
-								: -1;
+							return order === "ascending" ? compared : -compared;
 						})
 						.map((packageEstimate) => (
 							<Estimate
@@ -115,3 +124,12 @@ function sumEstimateFunding(packages: EstimatedPackage[]) {
 }
 
 // todo: figure out ascending & descending
+// original state is sorted by:
+// - lifted (bool falsy)
+// - estimate (num descending)
+// - name (string ascending)
+
+// make three click handlers
+// make a 'handle next click' func to switch from asc to desc
+// make initial state an object with thead and asc or desc
+// useReducer?
