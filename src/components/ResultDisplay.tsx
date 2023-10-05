@@ -1,4 +1,5 @@
 "use client";
+import clsx from "clsx";
 import { useState } from "react";
 import { EstimatedPackage } from "tidelift-me-up";
 
@@ -36,12 +37,15 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	const [sort, setSort] = useState<"estimate" | "lifted" | "name">();
 	const [order, setOrder] = useState<"ascending" | "descending">("ascending");
 
+	// const [active, setActive] = useState(false);
+
 	function setSortAndOrder(received: typeof sort) {
 		if (received === sort) {
 			setOrder(order === "ascending" ? "descending" : "ascending");
 		} else {
 			setSort(received);
 			setOrder("ascending");
+			// setActive(true);
 		}
 	}
 
@@ -57,15 +61,30 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 					<tr>
 						<th className={styles.th}>
 							Package Name
-							<button onClick={() => setSortAndOrder("name")}>Sort</button>
+							<button
+								className={clsx(sort === "name" && styles.isActive)}
+								onClick={() => setSortAndOrder("name")}
+							>
+								Sort
+							</button>
 						</th>
 						<th className={styles.th}>
 							Estimate
-							<button onClick={() => setSortAndOrder("estimate")}>Sort</button>
+							<button
+								className={clsx(sort === "estimate" && styles.isActive)}
+								onClick={() => setSortAndOrder("estimate")}
+							>
+								Sort
+							</button>
 						</th>
 						<th className={styles.th}>
 							Status
-							<button onClick={() => setSortAndOrder("lifted")}>Sort</button>
+							<button
+								className={clsx(sort === "lifted" && styles.isActive)}
+								onClick={() => setSortAndOrder("lifted")}
+							>
+								Sort
+							</button>
 						</th>
 					</tr>
 				</thead>
@@ -123,13 +142,8 @@ function sumEstimateFunding(packages: EstimatedPackage[]) {
 	return total;
 }
 
-// todo: figure out ascending & descending
-// original state is sorted by:
-// - lifted (bool falsy)
-// - estimate (num descending)
-// - name (string ascending)
-
-// make three click handlers
-// make a 'handle next click' func to switch from asc to desc
-// make initial state an object with thead and asc or desc
-// useReducer?
+// setSort:
+// 1. If current state === button -> bold text
+// 2. If state resets, remove highlight
+// setOrder
+// 3. Up and down buttons

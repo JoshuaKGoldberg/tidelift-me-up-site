@@ -28,3 +28,6 @@
 	padding: 1rem;
 	overflow: auto;
 }
+.isActive {
+	background-color: red;
+}
