@@ -37,15 +37,13 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	const [sort, setSort] = useState<"estimate" | "lifted" | "name">();
 	const [order, setOrder] = useState<"ascending" | "descending">("ascending");
 
-	// const [active, setActive] = useState(false);
-
 	function setSortAndOrder(received: typeof sort) {
 		if (received === sort) {
 			setOrder(order === "ascending" ? "descending" : "ascending");
+			console.log(order);
 		} else {
 			setSort(received);
 			setOrder("ascending");
-			// setActive(true);
 		}
 	}
 
@@ -62,28 +60,42 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 						<th className={styles.th}>
 							Package Name
 							<button
-								className={clsx(sort === "name" && styles.isActive)}
+								className={clsx(
+									styles.sortWidget,
+									sort === "name" && styles.isActive,
+									order === "descending" && styles.isDescending,
+								)}
 								onClick={() => setSortAndOrder("name")}
 							>
-								Sort
+								▲
 							</button>
 						</th>
 						<th className={styles.th}>
 							Estimate
 							<button
-								className={clsx(sort === "estimate" && styles.isActive)}
+								className={clsx(
+									styles.sortWidget,
+									sort === "estimate" && styles.isActive,
+									order === "descending" && styles.isDescending,
+								)}
 								onClick={() => setSortAndOrder("estimate")}
 							>
-								Sort
+								▲
 							</button>
 						</th>
 						<th className={styles.th}>
 							Status
 							<button
-								className={clsx(sort === "lifted" && styles.isActive)}
+								className={clsx(
+									styles.sortWidget,
+									sort === "lifted" &&
+										styles.isActive &&
+										order === "descending" &&
+										styles.isDescending,
+								)}
 								onClick={() => setSortAndOrder("lifted")}
 							>
-								Sort
+								▲
 							</button>
 						</th>
 					</tr>

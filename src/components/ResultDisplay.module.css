@@ -28,6 +28,16 @@
 	padding: 1rem;
 	overflow: auto;
 }
+
+.sortWidget {
+	background: none;
+	color: #1ebcc5;
+}
+
 .isActive {
-	background-color: red;
+	color: red;
+}
+
+.isDescending {
+	transform: rotate(180deg);
 }
