@@ -7,6 +7,8 @@
 .th {
 	font-weight: normal;
 	font-style: italic;
+	border-bottom: 0.5px solid var(--color-foreground);
+	padding-bottom: 1rem;
 }
 
 .th:first-of-type {
@@ -30,8 +32,19 @@
 }
 
 .sortWidget {
-	background: none;
-	color: #1ebcc5;
+	background-clip: padding-box, border-box;
+	background-image: linear-gradient(
+			var(--color-foreground),
+			var(--color-foreground)
+		),
+		var(--colors-foreground-bold);
+	background-origin: border-box;
+	border-radius: var(--border-radius-large);
+	border: double 1px transparent;
+	bottom: 1px;
+	color: inherit;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 }
 
 .isActive {

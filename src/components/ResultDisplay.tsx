@@ -69,7 +69,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								)}
 								onClick={() => setSortAndOrder("name")}
 							>
-								▲
+								▾
 							</button>
 						</th>
 						<th className={styles.th}>
@@ -84,7 +84,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								)}
 								onClick={() => setSortAndOrder("estimate")}
 							>
-								▲
+								▾
 							</button>
 						</th>
 						<th className={styles.th}>
@@ -99,7 +99,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								)}
 								onClick={() => setSortAndOrder("lifted")}
 							>
-								▲
+								▾
 							</button>
 						</th>
 					</tr>
