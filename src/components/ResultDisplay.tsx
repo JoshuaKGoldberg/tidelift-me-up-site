@@ -63,7 +63,9 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								className={clsx(
 									styles.sortWidget,
 									sort === "name" && styles.isActive,
-									order === "descending" && styles.isDescending,
+									order === "descending" &&
+										sort === "name" &&
+										styles.isDescending,
 								)}
 								onClick={() => setSortAndOrder("name")}
 							>
@@ -76,7 +78,9 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								className={clsx(
 									styles.sortWidget,
 									sort === "estimate" && styles.isActive,
-									order === "descending" && styles.isDescending,
+									order === "descending" &&
+										sort === "estimate" &&
+										styles.isDescending,
 								)}
 								onClick={() => setSortAndOrder("estimate")}
 							>
@@ -88,9 +92,9 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 							<button
 								className={clsx(
 									styles.sortWidget,
-									sort === "lifted" &&
-										styles.isActive &&
-										order === "descending" &&
+									sort === "lifted" && styles.isActive,
+									order === "descending" &&
+										sort === "lifted" &&
 										styles.isDescending,
 								)}
 								onClick={() => setSortAndOrder("lifted")}
@@ -153,9 +157,3 @@ function sumEstimateFunding(packages: EstimatedPackage[]) {
 		});
 	return total;
 }
-
-// setSort:
-// 1. If current state === button -> bold text
-// 2. If state resets, remove highlight
-// setOrder
-// 3. Up and down buttons
