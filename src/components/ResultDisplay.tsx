@@ -35,7 +35,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	}
 
 	const [sort, setSort] = useState<"estimate" | "lifted" | "name">();
-	const [order, setOrder] = useState<"ascending" | "descending">("ascending");
+	const [order, setOrder] = useState<"ascending" | "descending">("descending");
 
 	function setSortAndOrder(received: typeof sort) {
 		if (received === sort) {
@@ -62,14 +62,21 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 							<button
 								className={clsx(
 									styles.sortWidget,
-									sort === "name" && styles.isActive,
+
 									order === "descending" &&
 										sort === "name" &&
 										styles.isDescending,
 								)}
 								onClick={() => setSortAndOrder("name")}
 							>
-								▾
+								<span
+									className={clsx(
+										styles.theSpan,
+										sort === "name" && styles.isActive,
+									)}
+								>
+									▾
+								</span>
 							</button>
 						</th>
 						<th className={styles.th}>
