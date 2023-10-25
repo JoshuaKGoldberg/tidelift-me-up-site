@@ -1,11 +1,12 @@
 "use client";
-import clsx from "clsx";
+
 import { useState } from "react";
 import { EstimatedPackage } from "tidelift-me-up";
 
 import { Estimate } from "./Estimate";
 import styles from "./ResultDisplay.module.css";
 import { ResultsContainer } from "./ResultsContainer";
+import { TableHead } from "./TableHead";
 
 export interface ResultDisplayProps {
 	result: Error | EstimatedPackage[] | undefined;
@@ -54,55 +55,11 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 				With a funding estimate of <b>~${sumEstimateFunding(result)}</b>
 			</p>
 			<table className={styles.estimates}>
-				<thead>
-					<tr>
-						<th className={styles.th}>
-							Package Name
-							<button
-								className={clsx(
-									styles.sortWidget,
-									sort === "name" && styles.isActive,
-									order === "descending" &&
-										sort === "name" &&
-										styles.isDescending,
-								)}
-								onClick={() => setSortAndOrder("name")}
-							>
-								▾
-							</button>
-						</th>
-						<th className={styles.th}>
-							Estimate
-							<button
-								className={clsx(
-									styles.sortWidget,
-									sort === "estimate" && styles.isActive,
-									order === "descending" &&
-										sort === "estimate" &&
-										styles.isDescending,
-								)}
-								onClick={() => setSortAndOrder("estimate")}
-							>
-								▾
-							</button>
-						</th>
-						<th className={styles.th}>
-							Status
-							<button
-								className={clsx(
-									styles.sortWidget,
-									sort === "lifted" && styles.isActive,
-									order === "descending" &&
-										sort === "lifted" &&
-										styles.isDescending,
-								)}
-								onClick={() => setSortAndOrder("lifted")}
-							>
-								▾
-							</button>
-						</th>
-					</tr>
-				</thead>
+				<TableHead
+					order={order}
+					setSortAndOrder={setSortAndOrder}
+					sort={sort}
+				/>
 				<tbody>
 					{result
 						.sort((a, b) => {
