@@ -41,9 +41,13 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	function setSortAndOrder(received: typeof sort) {
 		if (received === sort) {
 			setOrder(order === "ascending" ? "descending" : "ascending");
+			console.log(sort);
+			console.log(order);
 		} else {
 			setSort(received);
 			setOrder("ascending");
+			console.log(sort);
+			console.log(order);
 		}
 	}
 
@@ -64,7 +68,6 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 					{result
 						.sort((a, b) => {
 							let compared: number;
-
 							switch (sort) {
 								case "estimate":
 									compared = a.estimatedMoney - b.estimatedMoney;

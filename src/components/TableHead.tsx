@@ -1,6 +1,7 @@
 import clsx from "clsx";
 
-import styles from "./ResultDisplay.module.css";
+import styles from "./TableHead.module.css";
+import { Widget } from "./Widget";
 
 type TableOrder = "ascending" | "descending" | undefined;
 
@@ -17,16 +18,15 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 		<thead>
 			<tr>
 				<th className={styles.th}>
-					Package Name
 					<button
 						className={clsx(
-							styles.sortWidget,
+							styles.buttonContainer,
 							sort === "name" && styles.isActive,
-							order === "descending" && sort === "name" && styles.isDescending,
 						)}
 						onClick={() => setSortAndOrder("name")}
 					>
-						▾
+						Package Name
+						<Widget order={order} sort={sort} />
 					</button>
 				</th>
 				<th className={styles.th}>

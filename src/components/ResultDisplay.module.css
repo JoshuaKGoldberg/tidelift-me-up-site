@@ -4,21 +4,6 @@
 	width: 100%;
 }
 
-.th {
-	font-weight: normal;
-	font-style: italic;
-	border-bottom: 0.5px solid var(--color-foreground);
-	padding-bottom: 1rem;
-}
-
-.th:first-of-type {
-	text-align: left;
-}
-
-.th:not(.th:first-of-type) {
-	text-align: center;
-}
-
 .p {
 	text-align: center;
 }
@@ -29,21 +14,4 @@
 	border: 1px solid var(--color-foreground);
 	padding: 1rem;
 	overflow: auto;
-}
-
-.sortWidget {
-	background-color: transparent;
-	border-width: 0;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-	transition: transform 0.05s ease-out;
-	color: var(--color-foreground);
-}
-
-.isActive {
-	text-shadow: var(--color-foreground) 1px 0 10px;
-}
-
-.isDescending {
-	transform: rotate(180deg);
 }
