@@ -10,7 +10,11 @@
 }
 
 .th:not(.th:first-of-type) {
-	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background-color: mediumpurple;
+	/* is not centering bc: The display: table-cell property prevents justify-content from having an effect.
+Try setting display to something other than table-cell.; */
 }
 
 .sortWidget {
@@ -25,8 +29,12 @@
 	display: flex;
 	flex-direction: row;
 }
-.sortWidget:hover {
-	color: white;
+
+.sortWidget:not(.sortWidget:first-of-type) {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
 .caret {
