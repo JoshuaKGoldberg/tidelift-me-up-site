@@ -13,7 +13,7 @@
 	text-align: center;
 }
 
-.buttonContainer {
+.sortWidget {
 	font-family: inherit;
 	font-weight: normal;
 	font-style: italic;
@@ -22,12 +22,14 @@
 	border-width: 0;
 	color: var(--color-foreground);
 	cursor: pointer;
+	display: flex;
+	flex-direction: row;
 }
-.buttonContainer:hover {
+.sortWidget:hover {
 	color: white;
 }
 
-.sortWidget {
+.caret {
 	font-style: normal;
 	padding-left: 0.5em;
 	padding-right: 0.5em;
@@ -35,11 +37,10 @@
 }
 
 .isActive {
-	background-color: rgb(36, 89, 101);
+	font-weight: bold;
 }
 
 .isDescending {
 	display: block;
 	transform: rotate(180deg);
-	color: pink;
 }

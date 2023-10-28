@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
+import { Caret } from "./Caret";
 import styles from "./TableHead.module.css";
-import { Widget } from "./Widget";
 
 type TableOrder = "ascending" | "descending" | undefined;
 
@@ -20,13 +20,13 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 				<th className={styles.th}>
 					<button
 						className={clsx(
-							styles.buttonContainer,
+							styles.sortWidget,
 							sort === "name" && styles.isActive,
 						)}
 						onClick={() => setSortAndOrder("name")}
 					>
 						Package Name
-						<Widget order={order} sort={sort} />
+						<Caret order={order} sort={sort} />
 					</button>
 				</th>
 				<th className={styles.th}>
