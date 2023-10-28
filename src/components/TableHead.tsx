@@ -26,10 +26,40 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 						onClick={() => setSortAndOrder("name")}
 					>
 						Package Name
-						<Caret order={order} sort={sort} />
+						<span
+							className={clsx(
+								styles.caret,
+								order === "descending" &&
+									sort === "name" &&
+									styles.isDescending,
+							)}
+						>
+							▾
+						</span>
 					</button>
 				</th>
 				<th className={styles.th}>
+					<button
+						className={clsx(
+							styles.sortWidget,
+							sort === "estimate" && styles.isActive,
+						)}
+						onClick={() => setSortAndOrder("estimate")}
+					>
+						Estimate
+						<span
+							className={clsx(
+								styles.caret,
+								order === "descending" &&
+									sort === "estimate" &&
+									styles.isDescending,
+							)}
+						>
+							▾
+						</span>
+					</button>
+				</th>
+				{/* <th className={styles.th}>
 					Estimate
 					<button
 						className={clsx(
@@ -43,7 +73,7 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 					>
 						▾
 					</button>
-				</th>
+				</th> */}
 				<th className={styles.th}>
 					Status
 					<button

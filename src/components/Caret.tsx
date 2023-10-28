@@ -11,6 +11,7 @@ export interface CaretProps {
 	sort: TableSort;
 }
 export function Caret({ order, sort }: CaretProps) {
+	console.log(sort);
 	return (
 		<span
 			className={clsx(
