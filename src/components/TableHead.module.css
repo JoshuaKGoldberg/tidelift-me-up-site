@@ -1,6 +1,4 @@
 .th {
-	font-weight: normal;
-	font-style: italic;
 	border-bottom: 0.5px solid var(--color-foreground);
 	padding-bottom: 1rem;
 }
@@ -9,20 +7,10 @@
 	text-align: left;
 }
 
-/* .th:not(.th:first-of-type) {
-	display: flex;
-	flex: row;
-	this stacks th elements
-	align-items: center;
-	justify-content: center;
-	background-color: mediumpurple;
-} */
-
-.buttonContainer {
+.centerAlignContainer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: mediumpurple;
 }
 
 .sortWidget {
