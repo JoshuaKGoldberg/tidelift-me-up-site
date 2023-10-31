@@ -17,6 +17,7 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 		<thead>
 			<tr>
 				<th className={styles.th}>
+					{/* <div className={styles.buttonContainer}> */}
 					<button
 						className={clsx(
 							styles.sortWidget,
@@ -36,49 +37,54 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 							▾
 						</span>
 					</button>
+					{/* </div> */}
 				</th>
 				<th className={styles.th}>
-					<button
-						className={clsx(
-							styles.sortWidget,
-							sort === "estimate" && styles.isActive,
-						)}
-						onClick={() => setSortAndOrder("estimate")}
-					>
-						Estimate
-						<span
+					<div className={styles.buttonContainer}>
+						<button
 							className={clsx(
-								styles.caret,
-								order === "descending" &&
-									sort === "estimate" &&
-									styles.isDescending,
+								styles.sortWidget,
+								sort === "estimate" && styles.isActive,
 							)}
+							onClick={() => setSortAndOrder("estimate")}
 						>
-							▾
-						</span>
-					</button>
+							Estimate
+							<span
+								className={clsx(
+									styles.caret,
+									order === "descending" &&
+										sort === "estimate" &&
+										styles.isDescending,
+								)}
+							>
+								▾
+							</span>
+						</button>
+					</div>
 				</th>
 
 				<th className={styles.th}>
-					<button
-						className={clsx(
-							styles.sortWidget,
-							sort === "lifted" && styles.isActive,
-						)}
-						onClick={() => setSortAndOrder("lifted")}
-					>
-						Status
-						<span
+					<div className={styles.buttonContainer}>
+						<button
 							className={clsx(
-								styles.caret,
-								order === "descending" &&
-									sort === "lifted" &&
-									styles.isDescending,
+								styles.sortWidget,
+								sort === "lifted" && styles.isActive,
 							)}
+							onClick={() => setSortAndOrder("lifted")}
 						>
-							▾
-						</span>
-					</button>
+							Status
+							<span
+								className={clsx(
+									styles.caret,
+									order === "descending" &&
+										sort === "lifted" &&
+										styles.isDescending,
+								)}
+							>
+								▾
+							</span>
+						</button>
+					</div>
 				</th>
 			</tr>
 		</thead>

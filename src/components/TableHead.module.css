@@ -9,12 +9,19 @@
 	text-align: left;
 }
 
-.th:not(.th:first-of-type) {
+/* .th:not(.th:first-of-type) {
+	/* align-items: center;
+	justify-content: center;
+	background-color: mediumpurple; */
+/* is not centering bc: The display: table-cell property prevents justify-content from having an effect.
+Try setting display to something other than table-cell.; */
+/* } */
+
+.buttonContainer {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: mediumpurple;
-	/* is not centering bc: The display: table-cell property prevents justify-content from having an effect.
-Try setting display to something other than table-cell.; */
 }
 
 .sortWidget {
@@ -28,13 +35,6 @@ Try setting display to something other than table-cell.; */
 	cursor: pointer;
 	display: flex;
 	flex-direction: row;
-}
-
-.sortWidget:not(.sortWidget:first-of-type) {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 }
 
 .caret {
