@@ -10,12 +10,13 @@
 }
 
 /* .th:not(.th:first-of-type) {
-	/* align-items: center;
+	display: flex;
+	flex: row;
+	this stacks th elements
+	align-items: center;
 	justify-content: center;
-	background-color: mediumpurple; */
-/* is not centering bc: The display: table-cell property prevents justify-content from having an effect.
-Try setting display to something other than table-cell.; */
-/* } */
+	background-color: mediumpurple;
+} */
 
 .buttonContainer {
 	display: flex;
