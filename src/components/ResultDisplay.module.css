@@ -4,19 +4,6 @@
 	width: 100%;
 }
 
-.th {
-	font-weight: normal;
-	font-style: italic;
-}
-
-.th:first-of-type {
-	text-align: left;
-}
-
-.th:not(.th:first-of-type) {
-	text-align: center;
-}
-
 .p {
 	text-align: center;
 }

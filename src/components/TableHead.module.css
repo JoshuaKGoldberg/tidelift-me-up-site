@@ -1,0 +1,43 @@
+.th {
+	border-bottom: 0.5px solid var(--color-foreground);
+	padding-bottom: 1rem;
+}
+
+.th:first-of-type {
+	text-align: left;
+}
+
+.centerAlignContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sortWidget {
+	font-family: inherit;
+	font-weight: normal;
+	font-style: italic;
+	font-size: medium;
+	background-color: transparent;
+	border-width: 0;
+	color: var(--color-foreground);
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+}
+
+.caret {
+	font-style: normal;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	transition: transform 0.25s ease-out;
+}
+
+.isActive {
+	font-weight: bold;
+}
+
+.isDescending {
+	display: block;
+	transform: rotate(180deg);
+}

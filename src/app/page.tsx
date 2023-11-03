@@ -26,7 +26,7 @@ export default async function Home({ searchParams }: HomeProps) {
 			].filter(Boolean) as PackageOwnership[],
 		),
 		since: (searchParams["since"] || undefined) as string | undefined,
-		username: searchParams["username"] as string,
+		username: searchParams.username as string,
 	};
 	let result: Error | EstimatedPackage[] | undefined;
 
