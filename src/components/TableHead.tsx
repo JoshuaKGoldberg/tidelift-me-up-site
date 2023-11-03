@@ -25,16 +25,16 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 						onClick={() => setSortAndOrder("name")}
 					>
 						Package Name
-						<span
-							className={clsx(
-								styles.caret,
-								order === "descending" &&
-									sort === "name" &&
-									styles.isDescending,
-							)}
-						>
-							▾
-						</span>
+						{sort === "name" && (
+							<span
+								className={clsx(
+									styles.caret,
+									order === "descending" && styles.isDescending,
+								)}
+							>
+								▾
+							</span>
+						)}
 					</button>
 				</th>
 				<th className={styles.th}>
@@ -47,16 +47,16 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 							onClick={() => setSortAndOrder("estimate")}
 						>
 							Estimate
-							<span
-								className={clsx(
-									styles.caret,
-									order === "descending" &&
-										sort === "estimate" &&
-										styles.isDescending,
-								)}
-							>
-								▾
-							</span>
+							{sort === "estimate" && (
+								<span
+									className={clsx(
+										styles.caret,
+										order === "descending" && styles.isDescending,
+									)}
+								>
+									▾
+								</span>
+							)}
 						</button>
 					</div>
 				</th>
@@ -71,16 +71,16 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 							onClick={() => setSortAndOrder("lifted")}
 						>
 							Status
-							<span
-								className={clsx(
-									styles.caret,
-									order === "descending" &&
-										sort === "lifted" &&
-										styles.isDescending,
-								)}
-							>
-								▾
-							</span>
+							{sort === "lifted" && (
+								<span
+									className={clsx(
+										styles.caret,
+										order === "descending" && styles.isDescending,
+									)}
+								>
+									▾
+								</span>
+							)}
 						</button>
 					</div>
 				</th>
