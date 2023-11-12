@@ -22,14 +22,14 @@
 			"name": "David Sherret",
 			"avatar_url": "https://avatars.githubusercontent.com/u/1609021?v=4",
 			"profile": "http://stackoverflow.com/users/188246/david-sherret",
-			"contributions": ["code"]
+			"contributions": ["bug", "code"]
 		},
 		{
 			"login": "jrachelr",
 			"name": "Rachel Johnson",
 			"avatar_url": "https://avatars.githubusercontent.com/u/101299667?v=4",
 			"profile": "https://www.racheldev.com/",
-			"contributions": ["code", "maintenance", "bug"]
+			"contributions": ["code", "design", "maintenance", "bug"]
 		},
 		{
 			"login": "RuthwikReddy09",
