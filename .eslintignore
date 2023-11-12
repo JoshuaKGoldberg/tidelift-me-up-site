@@ -1,6 +1,5 @@
 !.*
 .next
-next.config.js
 coverage
 lib
 node_modules

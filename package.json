@@ -11,6 +11,7 @@
 		"name": "JoshuaKGoldberg",
 		"email": "npm@joshuakgoldberg.com"
 	},
+	"type": "module",
 	"scripts": {
 		"build": "next build",
 		"dev": "next dev",
