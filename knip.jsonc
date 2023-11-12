@@ -1,11 +1,6 @@
 {
-	"$schema": "https://unpkg.com/knip@next/schema.json",
+	"$schema": "https://unpkg.com/knip@latest/schema.json",
 	"entry": ["src/app/**/*.tsx!"],
-	"ignoreBinaries": ["dedupe", "gh"],
-	"ignoreDependencies": ["all-contributors-cli", "c8"],
-	"ignoreExportsUsedInFile": {
-		"interface": true,
-		"type": true
-	},
+	"ignoreExportsUsedInFile": { "interface": true, "type": true },
 	"project": ["src/**/*.ts!", "src/**/*.tsx!"]
 }

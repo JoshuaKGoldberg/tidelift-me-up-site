@@ -1,5 +1,5 @@
 .next
-coverage*/
+coverage/
 lib/
 next-env.d.ts
 node_modules/

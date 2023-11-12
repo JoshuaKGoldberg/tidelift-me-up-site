@@ -13,7 +13,6 @@ module.exports = {
 		"plugin:n/recommended",
 		"plugin:perfectionist/recommended-natural",
 		"plugin:regexp/recommended",
-		"prettier",
 	],
 	overrides: [
 		{
@@ -24,13 +23,20 @@ module.exports = {
 		{
 			extends: [
 				"plugin:jsdoc/recommended-typescript-error",
-				"plugin:@typescript-eslint/recommended",
+				"plugin:@typescript-eslint/strict",
+				"plugin:@typescript-eslint/stylistic",
 			],
 			files: ["**/*.ts", "**/*.tsx"],
 			parser: "@typescript-eslint/parser",
 			rules: {
 				// These off-by-default rules work well for this repo and we like them on.
 				"jsdoc/informative-docs": "error",
+				"logical-assignment-operators": [
+					"error",
+					"always",
+					{ enforceForIfStatements: true },
+				],
+				"operator-assignment": "error",
 
 				// These on-by-default rules don't work well for this repo and we like them off.
 				"jsdoc/require-jsdoc": "off",
@@ -40,10 +46,19 @@ module.exports = {
 			},
 		},
 		{
+			files: "**/*.md/*.ts",
+			rules: {
+				"n/no-missing-import": [
+					"error",
+					{ allowModules: ["tidelift-me-up-site"] },
+				],
+			},
+		},
+		{
 			excludedFiles: ["**/*.md/*.ts"],
 			extends: [
-				"plugin:@typescript-eslint/recommended-requiring-type-checking",
-				"plugin:@typescript-eslint/strict",
+				"plugin:@typescript-eslint/strict-type-checked",
+				"plugin:@typescript-eslint/stylistic-type-checked",
 			],
 			files: ["**/*.ts"],
 			parser: "@typescript-eslint/parser",
@@ -53,14 +68,6 @@ module.exports = {
 			rules: {
 				// These off-by-default rules work well for this repo and we like them on.
 				"deprecation/deprecation": "error",
-
-				// These more-strict-by-default rules don't work well for this repo and we like them less strict.
-				"@typescript-eslint/no-unnecessary-condition": [
-					"error",
-					{
-						allowConstantLoopConditions: true,
-					},
-				],
 			},
 		},
 		{
@@ -70,6 +77,12 @@ module.exports = {
 			parser: "jsonc-eslint-parser",
 			rules: {
 				"jsonc/sort-keys": "error",
+			},
+		},
+		{
+			files: ["*.jsonc"],
+			rules: {
+				"jsonc/no-comments": "off",
 			},
 		},
 		{
@@ -99,28 +112,33 @@ module.exports = {
 	plugins: [
 		"@typescript-eslint",
 		"deprecation",
-		"import",
 		"jsdoc",
 		"jsx-a11y",
+		"no-only-tests",
 		"perfectionist",
 		"regexp",
 	],
+	reportUnusedDisableDirectives: true,
 	root: true,
 	rules: {
 		// These off/less-strict-by-default rules work well for this repo and we like them on.
 		"@typescript-eslint/no-unused-vars": ["error", { caughtErrors: "all" }],
+		"no-only-tests/no-only-tests": "error",
 
 		// These on-by-default rules don't work well for this repo and we like them off.
 		"n/no-missing-import": "off",
 		"no-case-declarations": "off",
 		"no-constant-condition": "off",
 		"no-inner-declarations": "off",
+		"no-mixed-spaces-and-tabs": "off",
 
 		// Stylistic concerns that don't interfere with Prettier
 		"@typescript-eslint/padding-line-between-statements": [
 			"error",
 			{ blankLine: "always", next: "*", prev: "block-like" },
 		],
+		"no-useless-rename": "error",
+		"object-shorthand": "error",
 		"perfectionist/sort-objects": [
 			"error",
 			{

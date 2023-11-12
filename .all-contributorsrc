@@ -1,70 +1,51 @@
 {
-  "badgeTemplate": "<img alt=\"All Contributors: <%= contributors.length %>\" src=\"https://img.shields.io/badge/all_contributors-<%= contributors.length %>-21bb42.svg\" />",
-  "commit": false,
-  "commitConvention": "angular",
-  "contributors": [
-    {
-      "avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
-      "contributions": [
-        "maintenance",
-        "code",
-        "design",
-        "tool"
-      ],
-      "login": "JoshuaKGoldberg",
-      "name": "Josh Goldberg",
-      "profile": "http://www.joshuakgoldberg.com"
-    },
-    {
-      "login": "kathryngraysonnanz",
-      "name": "Kathryn Grayson Nanz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/61242943?v=4",
-      "profile": "https://github.com/kathryngraysonnanz",
-      "contributions": [
-        "design"
-      ]
-    },
-    {
-      "login": "dsherret",
-      "name": "David Sherret",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1609021?v=4",
-      "profile": "http://stackoverflow.com/users/188246/david-sherret",
-      "contributions": [
-        "code",
-        "bug"
-      ]
-    },
-    {
-      "login": "jrachelr",
-      "name": "Rachel Johnson",
-      "avatar_url": "https://avatars.githubusercontent.com/u/101299667?v=4",
-      "profile": "https://www.racheldev.com/",
-      "contributions": [
-        "code",
-        "design",
-        "maintenance",
-        "bug"
-      ]
-    },
-    {
-      "login": "RuthwikReddy09",
-      "name": "Ruthwik",
-      "avatar_url": "https://avatars.githubusercontent.com/u/126862059?v=4",
-      "profile": "https://github.com/RuthwikReddy09",
-      "contributions": [
-        "code"
-      ]
-    }
-  ],
-  "contributorsPerLine": 7,
-  "contributorsSortAlphabetically": true,
-  "files": [
-    "README.md"
-  ],
-  "imageSize": 100,
-  "projectName": "tidelift-me-up-site",
-  "projectOwner": "JoshuaKGoldberg",
-  "repoHost": "https://github.com",
-  "repoType": "github",
-  "commitType": "docs"
+	"badgeTemplate": "<img alt=\"All Contributors: <%= contributors.length %> 👪\" src=\"https://img.shields.io/badge/all_contributors-<%= contributors.length %>_👪-21bb42.svg\" />",
+	"commit": false,
+	"commitConvention": "angular",
+	"contributors": [
+		{
+			"avatar_url": "https://avatars.githubusercontent.com/u/3335181?v=4",
+			"contributions": ["maintenance", "code", "design", "tool", "bug"],
+			"login": "JoshuaKGoldberg",
+			"name": "Josh Goldberg",
+			"profile": "http://www.joshuakgoldberg.com"
+		},
+		{
+			"login": "kathryngraysonnanz",
+			"name": "Kathryn Grayson Nanz",
+			"avatar_url": "https://avatars.githubusercontent.com/u/61242943?v=4",
+			"profile": "https://github.com/kathryngraysonnanz",
+			"contributions": ["design"]
+		},
+		{
+			"login": "dsherret",
+			"name": "David Sherret",
+			"avatar_url": "https://avatars.githubusercontent.com/u/1609021?v=4",
+			"profile": "http://stackoverflow.com/users/188246/david-sherret",
+			"contributions": ["bug", "code"]
+		},
+		{
+			"login": "jrachelr",
+			"name": "Rachel Johnson",
+			"avatar_url": "https://avatars.githubusercontent.com/u/101299667?v=4",
+			"profile": "https://www.racheldev.com/",
+			"contributions": ["code", "design", "maintenance", "bug"]
+		},
+		{
+			"login": "RuthwikReddy09",
+			"name": "Ruthwik",
+			"avatar_url": "https://avatars.githubusercontent.com/u/126862059?v=4",
+			"profile": "https://github.com/RuthwikReddy09",
+			"contributions": ["code"]
+		}
+	],
+	"contributorsPerLine": 7,
+	"contributorsSortAlphabetically": true,
+	"files": ["README.md"],
+	"imageSize": 100,
+	"projectName": "tidelift-me-up-site",
+	"projectOwner": "JoshuaKGoldberg",
+	"repoHost": "https://github.com",
+	"repoType": "github"
 }
+

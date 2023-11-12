@@ -1,33 +1,29 @@
 {
 	"dictionaries": ["typescript"],
 	"ignorePaths": [
-		"./coverage*",
 		".github",
 		"*.tsbuildinfo",
 		"CHANGELOG.md",
+		"coverage",
 		"lib",
 		"node_modules",
 		"pnpm-lock.yaml"
 	],
 	"words": [
-		"clsx",
 		"Codecov",
 		"codespace",
 		"commitlint",
 		"contributorsrc",
 		"conventionalcommits",
-		"execa",
 		"Grayson",
 		"knip",
 		"lcov",
 		"markdownlintignore",
 		"Nanz",
-		"npmignore",
 		"npmpackagejsonlintrc",
 		"outro",
 		"packagejson",
 		"quickstart",
-		"Unstaged",
 		"wontfix"
 	]
 }

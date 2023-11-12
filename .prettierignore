@@ -1,5 +1,5 @@
 .all-contributorsrc
 .next/
-coverage*/
+coverage/
 lib/
 pnpm-lock.yaml
