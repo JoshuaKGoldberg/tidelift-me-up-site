@@ -1,5 +1,7 @@
 !.*
-coverage*
+.next
+next.config.js
+coverage
 lib
 node_modules
 pnpm-lock.yaml
