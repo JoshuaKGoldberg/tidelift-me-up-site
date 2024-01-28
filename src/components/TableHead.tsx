@@ -10,9 +10,15 @@ export interface TableHeadProps {
 	order: TableOrder;
 	setSortAndOrder: (received: TableSort) => void;
 	sort: TableSort;
+	showEstimates: boolean;
 }
 
-export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
+export function TableHead({
+	order,
+	setSortAndOrder,
+	showEstimates,
+	sort,
+}: TableHeadProps) {
 	return (
 		<thead>
 			<tr>
@@ -37,29 +43,31 @@ export function TableHead({ order, setSortAndOrder, sort }: TableHeadProps) {
 						)}
 					</button>
 				</th>
-				<th className={styles.th}>
-					<div className={styles.centerAlignContainer}>
-						<button
-							className={clsx(
-								styles.sortWidget,
-								sort === "estimate" && styles.isActive,
-							)}
-							onClick={() => setSortAndOrder("estimate")}
-						>
-							Estimate
-							{sort === "estimate" && (
-								<span
-									className={clsx(
-										styles.caret,
-										order === "descending" && styles.isDescending,
-									)}
-								>
-									▾
-								</span>
-							)}
-						</button>
-					</div>
-				</th>
+				{showEstimates ? (
+					<th className={styles.th}>
+						<div className={styles.centerAlignContainer}>
+							<button
+								className={clsx(
+									styles.sortWidget,
+									sort === "estimate" && styles.isActive,
+								)}
+								onClick={() => setSortAndOrder("estimate")}
+							>
+								Estimate
+								{sort === "estimate" && (
+									<span
+										className={clsx(
+											styles.caret,
+											order === "descending" && styles.isDescending,
+										)}
+									>
+										▾
+									</span>
+								)}
+							</button>
+						</div>
+					</th>
+				) : null}
 
 				<th className={styles.th}>
 					<div className={styles.centerAlignContainer}>

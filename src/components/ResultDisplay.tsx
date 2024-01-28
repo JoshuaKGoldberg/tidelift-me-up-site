@@ -47,17 +47,23 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 		}
 	}
 
+	const showEstimates = result.some(
+		(packageEstimate) => !packageEstimate.lifted,
+	);
+
 	return (
 		<ResultsContainer
 			heading={`${counted(result.length, "Liftable Package")} Found`}
 		>
 			<p className={styles.p}>
-				With a funding estimate of <b>~${sumEstimateFunding(result)}</b>
+				With an unclaimed funding estimate of{" "}
+				<b>~${sumEstimateFunding(result)}</b>
 			</p>
 			<table className={styles.estimates}>
 				<TableHead
 					order={order}
 					setSortAndOrder={setSortAndOrder}
+					showEstimates={showEstimates}
 					sort={sort}
 				/>
 				<tbody>
@@ -92,6 +98,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 							<Estimate
 								estimatedPackage={packageEstimate}
 								key={packageEstimate.name}
+								showEstimates={showEstimates}
 							/>
 						))}
 				</tbody>
@@ -106,6 +113,7 @@ function counted(count: number, text: string) {
 
 function sumEstimateFunding(packages: EstimatedPackage[]) {
 	const total = packages
+		.filter((estimate) => !estimate.lifted)
 		.reduce((total, current) => total + current.estimatedMoney, 0)
 		.toLocaleString("en-US", {
 			maximumFractionDigits: 0,
