@@ -9,8 +9,8 @@ type TableSort = "estimate" | "lifted" | "name" | undefined;
 export interface TableHeadProps {
 	order: TableOrder;
 	setSortAndOrder: (received: TableSort) => void;
-	sort: TableSort;
 	showEstimates: boolean;
+	sort: TableSort;
 }
 
 export function TableHead({
