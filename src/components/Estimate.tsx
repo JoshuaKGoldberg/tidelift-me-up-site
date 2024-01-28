@@ -6,15 +6,17 @@ import styles from "./Estimate.module.css";
 
 export interface EstimateProps {
 	estimatedPackage: EstimatedPackage;
+	showEstimates: boolean;
 }
 
-export function Estimate({ estimatedPackage }: EstimateProps) {
+export function Estimate({ estimatedPackage, showEstimates }: EstimateProps) {
 	const {
 		data: { description },
 		estimatedMoney,
 		lifted,
 		name,
 	} = estimatedPackage;
+
 	const href = `https://tidelift.com/lifter/search/npm/${encodeURIComponent(
 		name,
 	)}`;
@@ -31,9 +33,11 @@ export function Estimate({ estimatedPackage }: EstimateProps) {
 				</Anchor>
 				<em className={styles.description}>{description}</em>
 			</td>
-			<td className={styles.moneyCell}>
-				<div>~${Math.round(estimatedMoney)}</div>
-			</td>
+			{showEstimates ? (
+				<td className={styles.moneyCell}>
+					{lifted ? null : <div>~${Math.round(estimatedMoney)}</div>}
+				</td>
+			) : null}
 			<td className={styles.liftedCell}>
 				{lifted ? (
 					<Anchor href={href} target="_blank">
