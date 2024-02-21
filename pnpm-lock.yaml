@@ -18,8 +18,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   tidelift-me-up:
-    specifier: ^0.4.0
-    version: 0.4.0
+    specifier: ^0.4.1
+    version: 0.4.1
 
 devDependencies:
   '@next/eslint-plugin-next':
@@ -4781,8 +4781,8 @@ packages:
       readable-stream: 3.6.2
     dev: true
 
-  /tidelift-me-up@0.4.0:
-    resolution: {integrity: sha512-ik4UWzTP57BOYyyUNK/vJGdvYGwDCstWWTRYFQba767xsE15Jrf5e2HnPXqJ7hlc4Ywi9WqhkEQ+0j2F75dfHA==}
+  /tidelift-me-up@0.4.1:
+    resolution: {integrity: sha512-fCBrQzHBzrca88ogw3jdLkipA2UF1TDljRzkxpj92qKJyNGspmGTBn+RgWPdluprl1FGB00vB4EWxGZzUz8g1Q==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
