@@ -74,10 +74,12 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 				<tbody>
 					{result
 						.sort((a, b) => {
+							const aMoney = a.lifted ? 0 : a.estimatedMoney;
+							const bMoney = b.lifted ? 0 : b.estimatedMoney;
 							let compared: number;
 							switch (sort) {
 								case "estimate":
-									compared = a.estimatedMoney - b.estimatedMoney;
+									compared = aMoney - bMoney;
 									break;
 								case "name":
 									compared = a.name.localeCompare(b.name);
@@ -88,9 +90,9 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								case undefined:
 									compared =
 										a.lifted === b.lifted
-											? a.estimatedMoney === b.estimatedMoney
+											? aMoney === bMoney
 												? a.name.localeCompare(b.name)
-												: b.estimatedMoney - a.estimatedMoney
+												: bMoney - aMoney
 											: a.lifted
 											? 1
 											: -1;
@@ -119,7 +121,11 @@ function counted(count: number, text: string) {
 function sumEstimateFunding(packages: EstimatedPackage[]) {
 	const total = packages
 		.filter((estimate) => !estimate.lifted)
-		.reduce((total, current) => total + current.estimatedMoney, 0)
+		.reduce(
+			(total, current) =>
+				current.lifted ? total : total + current.estimatedMoney,
+			0,
+		)
 		.toLocaleString("en-US", {
 			maximumFractionDigits: 0,
 		});

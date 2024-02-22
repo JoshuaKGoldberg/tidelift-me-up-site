@@ -12,7 +12,6 @@ export interface EstimateProps {
 export function Estimate({ estimatedPackage, showEstimates }: EstimateProps) {
 	const {
 		data: { description },
-		estimatedMoney,
 		lifted,
 		name,
 	} = estimatedPackage;
@@ -35,7 +34,9 @@ export function Estimate({ estimatedPackage, showEstimates }: EstimateProps) {
 			</td>
 			{showEstimates ? (
 				<td className={styles.moneyCell}>
-					{lifted ? null : <div>~${Math.round(estimatedMoney)}</div>}
+					{lifted ? null : (
+						<div>~${Math.round(estimatedPackage.estimatedMoney)}</div>
+					)}
 				</td>
 			) : null}
 			<td className={styles.liftedCell}>
