@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^8.44.7
     version: 8.56.7
   '@types/node':
-    specifier: 20.12.3
-    version: 20.12.3
+    specifier: 20.12.4
+    version: 20.12.4
   '@types/react':
     specifier: ^18.2.14
     version: 18.2.74
@@ -90,7 +90,7 @@ devDependencies:
     version: 2.4.0
   knip:
     specifier: 5.7.1
-    version: 5.7.1(@types/node@20.12.3)(typescript@5.4.3)
+    version: 5.7.1(@types/node@20.12.4)(typescript@5.4.3)
   lint-staged:
     specifier: ^15.1.0
     version: 15.2.2
@@ -1046,8 +1046,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node@20.12.3:
-    resolution: {integrity: sha512-sD+ia2ubTeWrOu+YMF+MTAB7E+O7qsMqAbMfW7DG3K1URwhZ5hN1pLlRVGbf4wDFzSfikL05M17EyorS86jShw==}
+  /@types/node@20.12.4:
+    resolution: {integrity: sha512-E+Fa9z3wSQpzgYQdYmme5X3OTuejnnTx88A6p6vkkJosR3KBz+HpE3kqNm98VE6cfLFcISx7zW7MsJkH6KwbTw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -3351,7 +3351,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /knip@5.7.1(@types/node@20.12.3)(typescript@5.4.3):
+  /knip@5.7.1(@types/node@20.12.4)(typescript@5.4.3):
     resolution: {integrity: sha512-qO17flswODdIfu9q5UA20nsAhai90TtRBz9q0a4y4NtsWN2BRRzKYPOPn6K3lUpKQVyjOoA9S3a/xHYIEXKKYg==}
     engines: {node: '>=18.6.0'}
     hasBin: true
@@ -3366,7 +3366,7 @@ packages:
       '@pnpm/logger': 5.0.0
       '@pnpm/workspace.pkgs-graph': 2.0.15(@pnpm/logger@5.0.0)
       '@snyk/github-codeowners': 1.1.0
-      '@types/node': 20.12.3
+      '@types/node': 20.12.4
       '@types/picomatch': 2.3.3
       easy-table: 1.2.0
       fast-glob: 3.3.2
