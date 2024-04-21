@@ -26,7 +26,7 @@ importers:
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^14.0.0
-        version: 14.2.1
+        version: 14.2.2
       '@types/eslint':
         specifier: ^8.44.7
         version: 8.56.9
@@ -440,8 +440,8 @@ packages:
   '@next/env@14.1.4':
     resolution: {integrity: sha512-e7X7bbn3Z6DWnDi75UWn+REgAbLEqxI8Tq2pkFOFAMpWAWApz/YCUhtWMWn410h8Q2fYiYL7Yg5OlxMOCfFjJQ==}
 
-  '@next/eslint-plugin-next@14.2.1':
-    resolution: {integrity: sha512-Fp+mthEBjkn8r9qd6o4JgxKp0IDEzW0VYHD8ZC05xS5/lFNwHKuOdr2kVhWG7BQCO9L6eeepshM1Wbs2T+LgSg==}
+  '@next/eslint-plugin-next@14.2.2':
+    resolution: {integrity: sha512-q+Ec2648JtBpKiu/FSJm8HAsFXlNvioHeBCbTP12T1SGcHYwhqHULSfQgFkPgHDu3kzNp2Kem4J54bK4rPQ5SQ==}
 
   '@next/swc-darwin-arm64@14.1.4':
     resolution: {integrity: sha512-ubmUkbmW65nIAOmoxT1IROZdmmJMmdYvXIe8211send9ZYJu+SqxSnJM4TrPj9wmL6g9Atvj0S/2cFmMSS99jg==}
@@ -3323,7 +3323,7 @@ snapshots:
 
   '@next/env@14.1.4': {}
 
-  '@next/eslint-plugin-next@14.2.1':
+  '@next/eslint-plugin-next@14.2.2':
     dependencies:
       glob: 10.3.10
 
