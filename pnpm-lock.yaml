@@ -116,7 +116,7 @@ importers:
         version: 0.2.2(prettier@3.0.3)
       prettier-plugin-packagejson:
         specifier: ^2.4.6
-        version: 2.5.0(prettier@3.0.3)
+        version: 2.5.2(prettier@3.0.3)
       sentences-per-line:
         specifier: ^0.2.1
         version: 0.2.1
@@ -1422,8 +1422,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  ignore@5.3.1:
-    resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
+  ignore@5.3.2:
+    resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
   import-fresh@3.3.0:
@@ -2068,8 +2068,8 @@ packages:
     peerDependencies:
       prettier: ^2 || ^3
 
-  prettier-plugin-packagejson@2.5.0:
-    resolution: {integrity: sha512-6XkH3rpin5QEQodBSVNg+rBo4r91g/1mCaRwS1YGdQJZ6jwqrg2UchBsIG9tpS1yK1kNBvOt84OILsX8uHzBGg==}
+  prettier-plugin-packagejson@2.5.2:
+    resolution: {integrity: sha512-w+TmoLv2pIa+siplW1cCj2ujEXQQS6z7wmWLOiLQK/2QVl7Wy6xh/ZUpqQw8tbKMXDodmSW4GONxlA33xpdNOg==}
     peerDependencies:
       prettier: '>= 1.16.0'
     peerDependenciesMeta:
@@ -2198,8 +2198,8 @@ packages:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
 
-  semver@7.6.2:
-    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
+  semver@7.6.3:
+    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2256,8 +2256,8 @@ packages:
   sort-object-keys@1.1.3:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
 
-  sort-package-json@2.10.0:
-    resolution: {integrity: sha512-MYecfvObMwJjjJskhxYfuOADkXp1ZMMnCFC8yhp+9HDsk7HhR336hd7eiBs96lTXfiqmUNI+WQCeCMRBhl251g==}
+  sort-package-json@2.10.1:
+    resolution: {integrity: sha512-d76wfhgUuGypKqY72Unm5LFnMpACbdxXsLPcL27pOsSrmVqH3PztFp1uq+Z22suk15h7vXmTesuh2aEjdCqb5w==}
     hasBin: true
 
   source-map-js@1.2.0:
@@ -2380,8 +2380,8 @@ packages:
     resolution: {integrity: sha512-Vhf+bUa//YSTYKseDiiEuQmhGCoIF3CVBhunm3r/DQnYiGT4JssmnKQc44BIyOZRK2pKjXXAgbhfmbeoC9CJpA==}
     engines: {node: '>=12.20'}
 
-  synckit@0.9.0:
-    resolution: {integrity: sha512-7RnqIMq572L8PeEzKeBINYEJDDxpcH8JEgLwUqBd3TkofhFRbkq4QLR0u+36avGAhCRbk2nnmjcW9SE531hPDg==}
+  synckit@0.9.1:
+    resolution: {integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
   tapable@2.2.1:
@@ -2418,8 +2418,8 @@ packages:
     resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
     engines: {node: '>=6'}
 
-  tslib@2.6.3:
-    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -2833,7 +2833,7 @@ snapshots:
       debug: 4.3.6
       espree: 9.6.1
       globals: 13.24.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       minimatch: 3.1.2
@@ -2934,12 +2934,12 @@ snapshots:
   '@snyk/github-codeowners@1.1.0':
     dependencies:
       commander: 4.1.1
-      ignore: 5.3.1
+      ignore: 5.3.2
       p-map: 4.0.0
 
   '@swc/helpers@0.5.2':
     dependencies:
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@types/eslint@8.56.12':
     dependencies:
@@ -2987,7 +2987,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 7.16.0
       eslint: 8.57.0
       graphemer: 1.4.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       natural-compare: 1.4.0
       ts-api-utils: 1.3.0(typescript@5.5.3)
     optionalDependencies:
@@ -3042,7 +3042,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.6.2
+      semver: 7.6.3
       ts-api-utils: 1.3.0(typescript@5.5.3)
     optionalDependencies:
       typescript: 5.5.3
@@ -3057,7 +3057,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.6.2
+      semver: 7.6.3
       ts-api-utils: 1.3.0(typescript@5.5.3)
     optionalDependencies:
       typescript: 5.5.3
@@ -3073,7 +3073,7 @@ snapshots:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/typescript-estree': 6.21.0(typescript@5.5.3)
       eslint: 8.57.0
-      semver: 7.6.2
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3427,7 +3427,7 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       file-entry-cache: 8.0.0
       get-stdin: 9.0.0
-      semver: 7.6.2
+      semver: 7.6.3
       strip-ansi: 7.1.0
       vscode-uri: 3.0.8
 
@@ -3662,14 +3662,14 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@8.57.0):
     dependencies:
       eslint: 8.57.0
-      semver: 7.6.2
+      semver: 7.6.3
 
   eslint-plugin-deprecation@3.0.0(eslint@8.57.0)(typescript@5.5.3):
     dependencies:
       '@typescript-eslint/utils': 7.16.0(eslint@8.57.0)(typescript@5.5.3)
       eslint: 8.57.0
       ts-api-utils: 1.3.0(typescript@5.5.3)
-      tslib: 2.6.3
+      tslib: 2.7.0
       typescript: 5.5.3
     transitivePeerDependencies:
       - supports-color
@@ -3685,7 +3685,7 @@ snapshots:
     dependencies:
       escape-string-regexp: 1.0.5
       eslint: 8.57.0
-      ignore: 5.3.1
+      ignore: 5.3.2
 
   eslint-plugin-jsdoc@48.6.0(eslint@8.57.0):
     dependencies:
@@ -3697,9 +3697,9 @@ snapshots:
       eslint: 8.57.0
       esquery: 1.6.0
       parse-imports: 2.1.1
-      semver: 7.6.2
+      semver: 7.6.3
       spdx-expression-parse: 4.0.0
-      synckit: 0.9.0
+      synckit: 0.9.1
     transitivePeerDependencies:
       - supports-color
 
@@ -3749,9 +3749,9 @@ snapshots:
       eslint-plugin-es-x: 7.7.0(eslint@8.57.0)
       get-tsconfig: 4.7.5
       globals: 15.5.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       minimatch: 9.0.5
-      semver: 7.6.2
+      semver: 7.6.3
 
   eslint-plugin-no-only-tests@3.1.0: {}
 
@@ -3821,7 +3821,7 @@ snapshots:
       glob-parent: 6.0.2
       globals: 13.24.0
       graphemer: 1.4.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       is-path-inside: 3.0.3
@@ -4033,7 +4033,7 @@ snapshots:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.3.2
-      ignore: 5.3.1
+      ignore: 5.3.2
       merge2: 1.4.1
       slash: 3.0.0
 
@@ -4041,7 +4041,7 @@ snapshots:
     dependencies:
       dir-glob: 3.0.1
       fast-glob: 3.3.2
-      ignore: 5.3.1
+      ignore: 5.3.2
       merge2: 1.4.1
       slash: 4.0.0
 
@@ -4089,7 +4089,7 @@ snapshots:
 
   husky@9.0.11: {}
 
-  ignore@5.3.1: {}
+  ignore@5.3.2: {}
 
   import-fresh@3.3.0:
     dependencies:
@@ -4298,7 +4298,7 @@ snapshots:
       acorn: 8.11.3
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
-      semver: 7.6.2
+      semver: 7.6.3
 
   jsonc-parser@3.2.1: {}
 
@@ -4447,7 +4447,7 @@ snapshots:
       commander: 12.1.0
       get-stdin: 9.0.0
       glob: 10.4.1
-      ignore: 5.3.1
+      ignore: 5.3.2
       js-yaml: 4.1.0
       jsonc-parser: 3.2.1
       jsonpointer: 5.0.1
@@ -4586,7 +4586,7 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.13.1
-      semver: 7.6.2
+      semver: 7.6.3
       validate-npm-package-license: 3.0.4
 
   npm-package-json-lint-config-default@7.0.1(npm-package-json-lint@8.0.0(typescript@5.5.3)):
@@ -4601,13 +4601,13 @@ snapshots:
       cosmiconfig: 8.3.6(typescript@5.5.3)
       debug: 4.3.6
       globby: 11.1.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       is-plain-obj: 3.0.0
       jsonc-parser: 3.2.1
       log-symbols: 4.1.0
       meow: 9.0.0
       plur: 4.0.0
-      semver: 7.6.2
+      semver: 7.6.3
       slash: 3.0.0
       strip-json-comments: 3.1.1
       type-fest: 4.20.0
@@ -4777,10 +4777,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  prettier-plugin-packagejson@2.5.0(prettier@3.0.3):
+  prettier-plugin-packagejson@2.5.2(prettier@3.0.3):
     dependencies:
-      sort-package-json: 2.10.0
-      synckit: 0.9.0
+      sort-package-json: 2.10.1
+      synckit: 0.9.1
     optionalDependencies:
       prettier: 3.0.3
 
@@ -4915,7 +4915,7 @@ snapshots:
 
   semver@5.7.2: {}
 
-  semver@7.6.2: {}
+  semver@7.6.3: {}
 
   sentences-per-line@0.2.1:
     dependencies:
@@ -4972,7 +4972,7 @@ snapshots:
 
   sort-object-keys@1.1.3: {}
 
-  sort-package-json@2.10.0:
+  sort-package-json@2.10.1:
     dependencies:
       detect-indent: 7.0.1
       detect-newline: 4.0.1
@@ -4980,7 +4980,7 @@ snapshots:
       git-hooks-list: 3.1.0
       globby: 13.2.2
       is-plain-obj: 4.1.0
-      semver: 7.6.2
+      semver: 7.6.3
       sort-object-keys: 1.1.3
 
   source-map-js@1.2.0: {}
@@ -5095,12 +5095,12 @@ snapshots:
 
   synckit@0.6.2:
     dependencies:
-      tslib: 2.6.3
+      tslib: 2.7.0
 
-  synckit@0.9.0:
+  synckit@0.9.1:
     dependencies:
       '@pkgr/core': 0.1.1
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   tapable@2.2.1: {}
 
@@ -5130,7 +5130,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tslib@2.6.3: {}
+  tslib@2.7.0: {}
 
   type-check@0.4.0:
     dependencies:
