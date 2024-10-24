@@ -37,7 +37,7 @@
 		"tidelift-me-up": "^0.4.1"
 	},
 	"devDependencies": {
-		"@next/eslint-plugin-next": "^14.0.0",
+		"@next/eslint-plugin-next": "^15.0.0",
 		"@types/eslint": "^8.44.7",
 		"@types/node": "22.7.7",
 		"@types/react": "^18.2.14",
