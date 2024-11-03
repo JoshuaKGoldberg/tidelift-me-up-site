@@ -31,8 +31,8 @@ importers:
         specifier: ^8.44.7
         version: 8.56.12
       '@types/node':
-        specifier: 22.8.5
-        version: 22.8.5
+        specifier: 22.8.6
+        version: 22.8.6
       '@types/react':
         specifier: ^18.2.14
         version: 18.3.12
@@ -92,7 +92,7 @@ importers:
         version: 2.4.0
       knip:
         specifier: 5.35.0
-        version: 5.35.0(@types/node@22.8.5)(typescript@5.6.3)
+        version: 5.35.0(@types/node@22.8.6)(typescript@5.6.3)
       lint-staged:
         specifier: ^15.1.0
         version: 15.2.10
@@ -535,8 +535,8 @@ packages:
   '@types/minimist@1.2.2':
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
 
-  '@types/node@22.8.5':
-    resolution: {integrity: sha512-5iYk6AMPtsMbkZqCO1UGF9W5L38twq11S2pYWkybGHH2ogPUvXWNlQqJBzuEZWKj/WRH+QTeiv6ySWqJtvIEgA==}
+  '@types/node@22.8.6':
+    resolution: {integrity: sha512-tosuJYKrIqjQIlVCM4PEGxOmyg3FCPa/fViuJChnGeEIhjA46oy8FMVoF9su1/v8PNs2a8Q0iFNyOx0uOF91nw==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2966,7 +2966,7 @@ snapshots:
 
   '@types/minimist@1.2.2': {}
 
-  '@types/node@22.8.5':
+  '@types/node@22.8.6':
     dependencies:
       undici-types: 6.19.8
 
@@ -4269,11 +4269,11 @@ snapshots:
 
   kind-of@6.0.3: {}
 
-  knip@5.35.0(@types/node@22.8.5)(typescript@5.6.3):
+  knip@5.35.0(@types/node@22.8.6)(typescript@5.6.3):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       '@snyk/github-codeowners': 1.1.0
-      '@types/node': 22.8.5
+      '@types/node': 22.8.6
       easy-table: 1.2.0
       enhanced-resolve: 5.17.1
       fast-glob: 3.3.2
