@@ -18,6 +18,16 @@
 	<img alt="TypeScript: Strict" src="https://img.shields.io/badge/typescript-strict-21bb42.svg" />
 </p>
 
+## What?
+
+[Tidelift](https://tidelift.com) is a service for companies to sponsor their open source dependencies.
+Through Tidelift, companies contribute to a fund that is distributed monthly to maintainers of eligible open-source packages in a process called "lifting."
+
+Unfortunately, there's no easy way on the Tidelift website to search for which packages under a particular open source maintainer are eligible for lifting or currently being lifted.
+This app does that!
+
+> See it in action online at [tidelift-me-up-site.vercel.app](https://tidelift-me-up-site.vercel.app)!
+
 ## Development
 
 See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
