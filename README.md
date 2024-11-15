@@ -21,7 +21,7 @@
 ## What?
 
 [Tidelift](https://tidelift.com) is a service for companies to sponsor their open source dependencies.
-Through Tidelift, companies contribute to a fund that is distributed monthly to maintainers of eligible open-source packages in a process called "lifting."
+Through Tidelift, companies contribute to a fund that is distributed monthly to maintainers of eligible open-source packages in a process called "lifting".
 
 Unfortunately, there's no easy way on the Tidelift website to search for which packages under a particular open source maintainer are eligible for lifting or currently being lifted.
 This app does that!
