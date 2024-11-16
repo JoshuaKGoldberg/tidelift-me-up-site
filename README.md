@@ -6,7 +6,7 @@
 	<a href="#contributors" target="_blank">
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<img alt="All Contributors: 5 👪" src="https://img.shields.io/badge/all_contributors-5_👪-21bb42.svg" />
+<img alt="All Contributors: 6 👪" src="https://img.shields.io/badge/all_contributors-6_👪-21bb42.svg" />
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 </a>
@@ -35,6 +35,7 @@ Thanks! 💖
       <td align="center" valign="top" width="14.28%"><a href="http://stackoverflow.com/users/188246/david-sherret"><img src="https://avatars.githubusercontent.com/u/1609021?v=4?s=100" width="100px;" alt="David Sherret"/><br /><sub><b>David Sherret</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues?q=author%3Adsherret" title="Bug reports">🐛</a> <a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/commits?author=dsherret" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#maintenance-JoshuaKGoldberg" title="Maintenance">🚧</a> <a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/commits?author=JoshuaKGoldberg" title="Code">💻</a> <a href="#design-JoshuaKGoldberg" title="Design">🎨</a> <a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a> <a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues?q=author%3AJoshuaKGoldberg" title="Bug reports">🐛</a> <a href="#ideas-JoshuaKGoldberg" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kathryngraysonnanz"><img src="https://avatars.githubusercontent.com/u/61242943?v=4?s=100" width="100px;" alt="Kathryn Grayson Nanz"/><br /><sub><b>Kathryn Grayson Nanz</b></sub></a><br /><a href="#design-kathryngraysonnanz" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/maggienegm"><img src="https://avatars.githubusercontent.com/u/8771586?v=4?s=100" width="100px;" alt="Maggie"/><br /><sub><b>Maggie</b></sub></a><br /><a href="#ideas-maggienegm" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.racheldev.com/"><img src="https://avatars.githubusercontent.com/u/101299667?v=4?s=100" width="100px;" alt="Rachel Johnson"/><br /><sub><b>Rachel Johnson</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/commits?author=jrachelr" title="Code">💻</a> <a href="#design-jrachelr" title="Design">🎨</a> <a href="#maintenance-jrachelr" title="Maintenance">🚧</a> <a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues?q=author%3Ajrachelr" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/RuthwikReddy09"><img src="https://avatars.githubusercontent.com/u/126862059?v=4?s=100" width="100px;" alt="Ruthwik"/><br /><sub><b>Ruthwik</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/tidelift-me-up-site/commits?author=RuthwikReddy09" title="Code">💻</a></td>
     </tr>
