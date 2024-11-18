@@ -1,6 +1,6 @@
 <h1 align="center">tidelift-me-up-site</h1>
 
-<p align="center">Web app to find your npm packages eligible for Tidelift funding. 💸</p>
+<p align="center">Web app to check if your npm packages are eligible for Tidelift funding. 💸</p>
 
 <p align="center">
 	<a href="#contributors" target="_blank">

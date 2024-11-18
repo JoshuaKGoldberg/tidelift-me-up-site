@@ -1,7 +1,7 @@
 {
 	"name": "tidelift-me-up-site",
 	"version": "0.0.0",
-	"description": "Web app to find your npm packages eligible for Tidelift funding. 💸",
+	"description": "Web app to check if your npm packages are eligible for Tidelift funding. 💸",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/JoshuaKGoldberg/tidelift-me-up-site"
