@@ -71,7 +71,7 @@ importers:
         version: 3.0.1(eslint@8.57.1)
       eslint-plugin-n:
         specifier: ^17.0.0
-        version: 17.13.1(eslint@8.57.1)
+        version: 17.13.2(eslint@8.57.1)
       eslint-plugin-no-only-tests:
         specifier: ^3.1.0
         version: 3.3.0
@@ -91,8 +91,8 @@ importers:
         specifier: ^2.4.0
         version: 2.4.0
       knip:
-        specifier: 5.37.0
-        version: 5.37.0(@types/node@22.9.0)(typescript@5.6.3)
+        specifier: 5.37.1
+        version: 5.37.1(@types/node@22.9.0)(typescript@5.6.3)
       lint-staged:
         specifier: ^15.1.0
         version: 15.2.10
@@ -1158,8 +1158,8 @@ packages:
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  eslint-plugin-n@17.13.1:
-    resolution: {integrity: sha512-97qzhk1z3DdSJNCqT45EslwCu5+LB9GDadSyBItgKUfGsXAmN/aa7LRQ0ZxHffUxUzvgbTPJL27/pE9ZQWHy7A==}
+  eslint-plugin-n@17.13.2:
+    resolution: {integrity: sha512-MhBAKkT01h8cOXcTBTlpuR7bxH5OBUNpUXefsvwSVEy46cY4m/Kzr2osUCQvA3zJFD6KuCeNNDv0+HDuWk/OcA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
@@ -1703,8 +1703,8 @@ packages:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
 
-  knip@5.37.0:
-    resolution: {integrity: sha512-ppbIumjNNnFKGr+DGWJtnfc4kXgEzNI+TxHwnyafr0IxT5nfonwGL0Qs53ZgSiIswSWM77m7KRzzP1AEvBEn6Q==}
+  knip@5.37.1:
+    resolution: {integrity: sha512-69gjKj5lLsLXcIPXlHyFfX5AOHgRdh/iXH8gUqvmsHtjqoWhOATeXZDjvvemmgw7KxbWbUzxBNbpjhtJWzgqGA==}
     engines: {node: '>=18.6.0'}
     hasBin: true
     peerDependencies:
@@ -3755,7 +3755,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-n@17.13.1(eslint@8.57.1):
+  eslint-plugin-n@17.13.2(eslint@8.57.1):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.1(eslint@8.57.1)
       enhanced-resolve: 5.17.1
@@ -4300,7 +4300,7 @@ snapshots:
 
   kind-of@6.0.3: {}
 
-  knip@5.37.0(@types/node@22.9.0)(typescript@5.6.3):
+  knip@5.37.1(@types/node@22.9.0)(typescript@5.6.3):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       '@snyk/github-codeowners': 1.1.0
