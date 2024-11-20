@@ -41,7 +41,7 @@ export default async function Home({ searchParams }: HomeProps) {
 			<MainArea as="main" className={styles.main}>
 				<h1 className={styles.h1}>tidelift-me-up</h1>
 				<p className={styles.p}>
-					Find your npm packages eligible for Tidelift funding 💸
+					Check if your npm packages are eligible for Tidelift funding 💸
 				</p>
 				<OptionsForm options={options} />
 				<ResultDisplay result={result} />
