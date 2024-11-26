@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { PackageOwnership } from "tidelift-me-up";
 
 import { CallToAction } from "./CallToAction";
@@ -19,13 +18,7 @@ export interface OptionsFormProps {
 export function OptionsForm({ options }: OptionsFormProps) {
 	const ownerships = new Set(options.ownership);
 
-	const [isSecondaryOptionsVisible, setIsSecondaryOptionsVisible] = useState(
-		!options.username,
-	);
-
-	const toggleSecondaryOptions = () => {
-		setIsSecondaryOptionsVisible(!isSecondaryOptionsVisible);
-	};
+	const optionsExpanded = !options.username;
 
 	return (
 		<form className={styles.optionsForm}>
@@ -50,33 +43,24 @@ export function OptionsForm({ options }: OptionsFormProps) {
 			</div>
 
 			<div className={styles.secondaryOptionsArea}>
-				<button
-					className={styles.toggleButton}
-					onClick={toggleSecondaryOptions}
-					type="button"
-				>
-					optionally, filter by
-					<svg
-						fill="none"
-						height="24"
-						stroke="currentColor"
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth="2"
-						style={{
-							transform: isSecondaryOptionsVisible
-								? "rotate(180deg)"
-								: "rotate(0deg)",
-						}}
-						viewBox="0 0 24 24"
-						width="24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path d="M6 9l6 6 6-6" />
-					</svg>
-				</button>
-
-				{isSecondaryOptionsVisible && (
+				<details className={styles.optionsDetails} open={optionsExpanded}>
+					<summary className={styles.optionsSummary}>
+						optionally, filter by{" "}
+						<svg
+							className={styles.chevronIcon}
+							fill="none"
+							height="24"
+							stroke="currentColor"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+							viewBox="0 0 24 24"
+							width="24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path d="M6 9l6 6 6-6" />
+						</svg>
+					</summary>
 					<div className={styles.secondaryOptions}>
 						<div className={styles.secondaryOptionArea}>
 							<label className={styles.labelSecondary} htmlFor="since">
@@ -114,7 +98,7 @@ export function OptionsForm({ options }: OptionsFormProps) {
 							</div>
 						</fieldset>
 					</div>
-				)}
+				</details>
 			</div>
 		</form>
 	);
