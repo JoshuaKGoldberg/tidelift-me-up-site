@@ -21,8 +21,8 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
       tidelift-me-up:
-        specifier: ^0.4.1
-        version: 0.4.1
+        specifier: ^0.4.2
+        version: 0.4.2
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.0.0
@@ -1926,8 +1926,8 @@ packages:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  npm-username-to-packages@0.1.2:
-    resolution: {integrity: sha512-tgRZiaZo2ieGKo6VDD6yZtZNKYQjs+6gJew8F/Lke0A3V7dvSEViAsuXM/U3XOsmf+uFI/86x/IT9UL8KxvTdg==}
+  npm-username-to-packages@0.1.3:
+    resolution: {integrity: sha512-+edPj9FpXjcBR+cUQ6+0e9sZQvlkyNAIPAExVyYLE5CUikhmutV7fVtVc56h/NHKkgsliaTp3nq2bcOMCDZi8g==}
     engines: {node: '>=18'}
 
   npm-whoami@1.1.4:
@@ -2392,8 +2392,8 @@ packages:
   text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
 
-  tidelift-me-up@0.4.1:
-    resolution: {integrity: sha512-fCBrQzHBzrca88ogw3jdLkipA2UF1TDljRzkxpj92qKJyNGspmGTBn+RgWPdluprl1FGB00vB4EWxGZzUz8g1Q==}
+  tidelift-me-up@0.4.2:
+    resolution: {integrity: sha512-L5LzfjPBvN97PnpVp9MoZgR7aq7Wj3Xku4G804kZAkqGZC8hgMRDG9D7+0MYWmNal8YsmmzJHHJnz2z58rfi0Q==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4581,7 +4581,7 @@ snapshots:
     dependencies:
       path-key: 4.0.0
 
-  npm-username-to-packages@0.1.2: {}
+  npm-username-to-packages@0.1.3: {}
 
   npm-whoami@1.1.4:
     dependencies:
@@ -5047,10 +5047,10 @@ snapshots:
 
   text-table@0.2.0: {}
 
-  tidelift-me-up@0.4.1:
+  tidelift-me-up@0.4.2:
     dependencies:
       chalk: 5.3.0
-      npm-username-to-packages: 0.1.2
+      npm-username-to-packages: 0.1.3
       npm-whoami: 1.1.4
 
   tinyglobby@0.2.10:
