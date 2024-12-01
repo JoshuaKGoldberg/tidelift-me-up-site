@@ -106,6 +106,7 @@
 .secondaryOptions {
 	flex-direction: column;
 	gap: 3rem;
+	margin-top: 1.25rem;
 }
 
 @media screen and (width >= 700px) {
@@ -137,4 +138,18 @@
 	border-radius: var(--border-radius-medium);
 	height: 2rem;
 	padding: 0.5rem;
+}
+
+.optionsSummary {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	font-style: italic;
+	gap: 4px;
+	justify-content: center;
+	list-style: none;
+}
+
+.optionsDetails[open] .chevronIcon {
+	transform: rotate(180deg);
 }
