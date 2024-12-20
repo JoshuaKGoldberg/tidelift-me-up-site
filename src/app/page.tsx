@@ -1,40 +1,36 @@
-import {
-	EstimatedPackage,
-	PackageOwnership,
-	tideliftMeUp,
-} from "tidelift-me-up";
-
 import { Footer } from "~/components/Footer";
 import { MainArea } from "~/components/MainArea";
 import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
 import { ScrollButton } from "~/components/ScrollButton";
+import { SearchParamsType, fetchData } from "~/utils/fetchData";
 
+import { metadata as defaultMetadata } from "./layout";
 import styles from "./page.module.css";
 
 export interface HomeProps {
-	searchParams: Record<string, unknown>;
+	searchParams: SearchParamsType;
+}
+
+export async function generateMetadata({ searchParams }: HomeProps) {
+	const { options, result } = await fetchData(searchParams);
+	const username = options.username || "";
+	const packageCount = Array.isArray(result) ? result.length : 0;
+
+	if (!username) {
+		return defaultMetadata;
+	}
+
+	return {
+		description: `${username} has ${packageCount} npm package${
+			packageCount === 1 ? "" : "s"
+		} eligible for Tidelift funding. 💸`,
+		title: `${username} | Tidelift Me Up`,
+	};
 }
 
 export default async function Home({ searchParams }: HomeProps) {
-	const options = {
-		ownership: undefinedIfEmpty(
-			[
-				searchParams["author"] === "on" && "author",
-				searchParams["maintainer"] === "on" && "maintainer",
-				searchParams["publisher"] === "on" && "publisher",
-			].filter(Boolean) as PackageOwnership[],
-		),
-		since: (searchParams["since"] || undefined) as string | undefined,
-		username: searchParams.username as string,
-	};
-	let result: Error | EstimatedPackage[] | undefined;
-
-	try {
-		result = options.username ? await tideliftMeUp(options) : undefined;
-	} catch (error) {
-		result = error as Error;
-	}
+	const { options, result } = await fetchData(searchParams);
 
 	return (
 		<>
@@ -50,8 +46,4 @@ export default async function Home({ searchParams }: HomeProps) {
 			<Footer />
 		</>
 	);
-}
-
-function undefinedIfEmpty<T>(items: T[]) {
-	return items.length === 0 ? undefined : items;
 }
