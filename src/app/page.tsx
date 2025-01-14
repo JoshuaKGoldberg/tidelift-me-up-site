@@ -3,34 +3,41 @@ import { MainArea } from "~/components/MainArea";
 import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
 import { ScrollButton } from "~/components/ScrollButton";
-import { SearchParamsType, fetchData } from "~/utils/fetchData";
+import { fetchData } from "~/utils/fetchData";
+import { SearchParams, getOptions } from "~/utils/getOptions";
 
 import { metadata as defaultMetadata } from "./layout";
 import styles from "./page.module.css";
 
 export interface HomeProps {
-	searchParams: SearchParamsType;
+	searchParams: SearchParams;
 }
 
 export async function generateMetadata({ searchParams }: HomeProps) {
-	const { options, result } = await fetchData(searchParams);
-	const username = options.username || "";
-	const packageCount = Array.isArray(result) ? result.length : 0;
+	const options = getOptions(searchParams);
+	const username = options.username;
 
 	if (!username) {
 		return defaultMetadata;
 	}
 
+	const result = await fetchData(options);
+
+	const description = Array.isArray(result)
+		? `${username} has ${result.length} npm package${
+				result.length === 1 ? "" : "s"
+		  } eligible for Tidelift funding. 💸`
+		: `Could not find packages for ${username}`;
+
 	return {
-		description: `${username} has ${packageCount} npm package${
-			packageCount === 1 ? "" : "s"
-		} eligible for Tidelift funding. 💸`,
+		description,
 		title: `${username} | Tidelift Me Up`,
 	};
 }
 
 export default async function Home({ searchParams }: HomeProps) {
-	const { options, result } = await fetchData(searchParams);
+	const options = getOptions(searchParams);
+	const result = await fetchData(options);
 
 	return (
 		<>
