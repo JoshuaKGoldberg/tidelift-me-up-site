@@ -1,40 +1,43 @@
-import {
-	EstimatedPackage,
-	PackageOwnership,
-	tideliftMeUp,
-} from "tidelift-me-up";
-
 import { Footer } from "~/components/Footer";
 import { MainArea } from "~/components/MainArea";
 import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
 import { ScrollButton } from "~/components/ScrollButton";
+import { fetchData } from "~/utils/fetchData";
+import { SearchParams, getOptions } from "~/utils/getOptions";
 
+import { metadata as defaultMetadata } from "./layout";
 import styles from "./page.module.css";
 
 export interface HomeProps {
-	searchParams: Record<string, unknown>;
+	searchParams: SearchParams;
+}
+
+export async function generateMetadata({ searchParams }: HomeProps) {
+	const options = getOptions(searchParams);
+	const username = options.username;
+
+	if (!username) {
+		return defaultMetadata;
+	}
+
+	const result = await fetchData(options);
+
+	const description = Array.isArray(result)
+		? `${username} has ${result.length} npm package${
+				result.length === 1 ? "" : "s"
+		  } eligible for Tidelift funding. 💸`
+		: `Could not find packages for ${username}`;
+
+	return {
+		description,
+		title: `${username} | Tidelift Me Up`,
+	};
 }
 
 export default async function Home({ searchParams }: HomeProps) {
-	const options = {
-		ownership: undefinedIfEmpty(
-			[
-				searchParams["author"] === "on" && "author",
-				searchParams["maintainer"] === "on" && "maintainer",
-				searchParams["publisher"] === "on" && "publisher",
-			].filter(Boolean) as PackageOwnership[],
-		),
-		since: (searchParams["since"] || undefined) as string | undefined,
-		username: searchParams.username as string,
-	};
-	let result: Error | EstimatedPackage[] | undefined;
-
-	try {
-		result = options.username ? await tideliftMeUp(options) : undefined;
-	} catch (error) {
-		result = error as Error;
-	}
+	const options = getOptions(searchParams);
+	const result = await fetchData(options);
 
 	return (
 		<>
@@ -50,8 +53,4 @@ export default async function Home({ searchParams }: HomeProps) {
 			<Footer />
 		</>
 	);
-}
-
-function undefinedIfEmpty<T>(items: T[]) {
-	return items.length === 0 ? undefined : items;
 }
