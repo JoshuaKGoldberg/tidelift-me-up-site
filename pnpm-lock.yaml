@@ -118,8 +118,8 @@ importers:
         specifier: ^2.4.6
         version: 2.5.19(prettier@3.0.3)
       sentences-per-line:
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: ^0.3.0
+        version: 0.3.0
       typescript:
         specifier: ^5.2.2
         version: 5.7.2
@@ -796,9 +796,6 @@ packages:
     resolution: {integrity: sha512-ixiS0nLNNG5jNQzgZJNoUpBKdo9yTYZMGJ+QgT2jmjR7G7+QHRCc4v6LQ3NgE7EBJq+o0ams3waJwkrlBom8Ig==}
     engines: {node: '>=14'}
 
-  argparse@1.0.10:
-    resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
-
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
@@ -1116,9 +1113,6 @@ packages:
   enhanced-resolve@5.18.3:
     resolution: {integrity: sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==}
     engines: {node: '>=10.13.0'}
-
-  entities@1.1.2:
-    resolution: {integrity: sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==}
 
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
@@ -1810,9 +1804,6 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  linkify-it@2.2.0:
-    resolution: {integrity: sha512-GnAl/knGn+i1U/wjBz3akz2stz+HrHLsxMwHQGofCDfPvlf+gDKN58UtfmUquTY4/MXeE2x7k19KQmeoZi94Iw==}
-
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
 
@@ -1871,18 +1862,14 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  markdown-it@8.4.2:
-    resolution: {integrity: sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==}
-    hasBin: true
-
   markdownlint-cli@0.45.0:
     resolution: {integrity: sha512-GiWr7GfJLVfcopL3t3pLumXCYs8sgWppjIA1F/Cc3zIMgD3tmkpyZ1xkm1Tej8mw53B93JsDjgA3KOftuYcfOw==}
     engines: {node: '>=20'}
     hasBin: true
 
-  markdownlint@0.11.0:
-    resolution: {integrity: sha512-wE5WdKD6zW2DQaPQ5TFBTXh5j76DnWd/IFffnDQgHmi6Y61DJXBDfLftZ/suJHuv6cwPjM6gKw2GaRLJMOR+Mg==}
-    engines: {node: '>=6'}
+  markdownlint-rule-helpers@0.28.0:
+    resolution: {integrity: sha512-qBOQWESmc/yTNe6nVu3D7AU7pFg2e7T5svbQI+S7rocw4g4xZ3GHerKPl0Rw0cx4fnAViEdzoAcbrxeuXUCEAA==}
+    engines: {node: '>=18'}
 
   markdownlint@0.38.0:
     resolution: {integrity: sha512-xaSxkaU7wY/0852zGApM8LdlIfGCW8ETZ0Rr62IQtAnUMlMuifsg09vWJcNYeL4f0anvr8Vo4ZQar8jGpV0btQ==}
@@ -1897,9 +1884,6 @@ packages:
 
   mdast-util-to-string@2.0.0:
     resolution: {integrity: sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==}
-
-  mdurl@1.0.1:
-    resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
 
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
@@ -2367,8 +2351,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  sentences-per-line@0.2.1:
-    resolution: {integrity: sha512-6hlyKBwqoaZJ5+RBTKNNem2kBGAboh9e9KfFw5KYKA+64xaTYWbv5C6XnOudx8xk1Sg6f/4yalhJtCZFSLWIsQ==}
+  sentences-per-line@0.3.0:
+    resolution: {integrity: sha512-/cSQgaLDEmed+AIC2KAd1A5k4sy8bbWy3ObBDUE2+JmiwolTBuc87TlwlTSnBJVPa7+zfGv28J63xzznFRv5tQ==}
+    engines: {node: '>=18'}
 
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
@@ -2440,9 +2425,6 @@ packages:
 
   spdx-license-ids@3.0.22:
     resolution: {integrity: sha512-4PRT4nh1EImPbt2jASOKHX7PB7I+e4IWNLvkKFDxNhJlfjbYlleYQh285Z/3mPTHSAK/AvdMmw5BNNuYH8ShgQ==}
-
-  sprintf-js@1.0.3:
-    resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
   streamsearch@1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
@@ -2616,9 +2598,6 @@ packages:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
-
-  uc.micro@1.0.6:
-    resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
 
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
@@ -3372,10 +3351,6 @@ snapshots:
 
   are-docs-informative@0.0.2: {}
 
-  argparse@1.0.10:
-    dependencies:
-      sprintf-js: 1.0.3
-
   argparse@2.0.1: {}
 
   aria-query@5.3.2: {}
@@ -3726,8 +3701,6 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.0
-
-  entities@1.1.2: {}
 
   entities@4.5.0: {}
 
@@ -4502,10 +4475,6 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  linkify-it@2.2.0:
-    dependencies:
-      uc.micro: 1.0.6
-
   linkify-it@5.0.0:
     dependencies:
       uc.micro: 2.1.0
@@ -4582,14 +4551,6 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  markdown-it@8.4.2:
-    dependencies:
-      argparse: 1.0.10
-      entities: 1.1.2
-      linkify-it: 2.2.0
-      mdurl: 1.0.1
-      uc.micro: 1.0.6
-
   markdownlint-cli@0.45.0:
     dependencies:
       commander: 13.1.0
@@ -4606,9 +4567,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  markdownlint@0.11.0:
-    dependencies:
-      markdown-it: 8.4.2
+  markdownlint-rule-helpers@0.28.0: {}
 
   markdownlint@0.38.0:
     dependencies:
@@ -4647,8 +4606,6 @@ snapshots:
       - supports-color
 
   mdast-util-to-string@2.0.0: {}
-
-  mdurl@1.0.1: {}
 
   mdurl@2.0.0: {}
 
@@ -5265,9 +5222,9 @@ snapshots:
 
   semver@7.7.3: {}
 
-  sentences-per-line@0.2.1:
+  sentences-per-line@0.3.0:
     dependencies:
-      markdownlint: 0.11.0
+      markdownlint-rule-helpers: 0.28.0
 
   set-function-length@1.2.2:
     dependencies:
@@ -5348,8 +5305,6 @@ snapshots:
       spdx-license-ids: 3.0.22
 
   spdx-license-ids@3.0.22: {}
-
-  sprintf-js@1.0.3: {}
 
   streamsearch@1.1.0: {}
 
@@ -5514,8 +5469,6 @@ snapshots:
       possible-typed-array-names: 1.0.0
 
   typescript@5.7.2: {}
-
-  uc.micro@1.0.6: {}
 
   uc.micro@2.1.0: {}
 
