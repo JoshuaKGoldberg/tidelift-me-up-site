@@ -42,7 +42,7 @@
 		"@types/node": "22.19.10",
 		"@types/react": "^18.2.14",
 		"@types/react-dom": "^18.2.6",
-		"@typescript-eslint/eslint-plugin": "^7.0.0",
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
 		"@typescript-eslint/parser": "^8.0.0",
 		"cspell": "^8.0.0",
 		"eslint": "^8.53.0",
