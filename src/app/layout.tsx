@@ -7,6 +7,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 export const metadata = {
 	description:
 		"Check if your npm packages are eligible for Tidelift funding. 💸",
+	metadataBase: new URL("https://tidelift-me-up-site.vercel.app"),
 	title: "Tidelift Me Up",
 };
 
