@@ -138,6 +138,10 @@
 	border-radius: var(--border-radius-medium);
 	height: 2rem;
 	padding: 0.5rem;
+
+	/* Android Chrome's native date picker keeps its intrinsic width instead of
+	   stretching in the flex column, which left it horizontally offset. */
+	width: 100%;
 }
 
 .optionsSummary {
