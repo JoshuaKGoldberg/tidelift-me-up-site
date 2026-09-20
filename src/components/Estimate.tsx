@@ -20,6 +20,9 @@ export function Estimate({ estimatedPackage, showEstimates }: EstimateProps) {
 		name,
 	)}`;
 
+	// Tidelift doesn't yet estimate income for packages without enough subscribers
+	const needsSubscribers = !lifted && estimatedPackage.estimatedMoney === 0;
+
 	return (
 		<tr className={styles.estimate}>
 			<td className={styles.nameCell}>
@@ -34,7 +37,7 @@ export function Estimate({ estimatedPackage, showEstimates }: EstimateProps) {
 			</td>
 			{showEstimates ? (
 				<td className={styles.moneyCell}>
-					{lifted ? null : (
+					{lifted || needsSubscribers ? null : (
 						<div>~${Math.round(estimatedPackage.estimatedMoney)}</div>
 					)}
 				</td>
@@ -43,6 +46,10 @@ export function Estimate({ estimatedPackage, showEstimates }: EstimateProps) {
 				{lifted ? (
 					<Anchor href={href} target="_blank">
 						Lifted
+					</Anchor>
+				) : needsSubscribers ? (
+					<Anchor href={href} target="_blank">
+						Needs Subscribers
 					</Anchor>
 				) : (
 					<CallToAction as="a" href={href} target="_blank">

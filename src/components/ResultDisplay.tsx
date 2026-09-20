@@ -50,6 +50,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	const showEstimates = result.some(
 		(packageEstimate) => !packageEstimate.lifted,
 	);
+	const unclaimedFunding = sumEstimateFunding(result);
 
 	return (
 		<ResultsContainer
@@ -58,10 +59,15 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 				`${showEstimates ? "Liftable" : "Lifted"} Package`,
 			)} Found`}
 		>
-			{showEstimates && (
+			{showEstimates && unclaimedFunding > 0 && (
 				<p className={styles.p}>
 					With an unclaimed funding estimate of{" "}
-					<b>~${sumEstimateFunding(result)}</b>
+					<b>
+						~$
+						{unclaimedFunding.toLocaleString("en-US", {
+							maximumFractionDigits: 0,
+						})}
+					</b>
 				</p>
 			)}
 			<table className={styles.estimates}>
@@ -119,15 +125,9 @@ function counted(count: number, text: string) {
 }
 
 function sumEstimateFunding(packages: EstimatedPackage[]) {
-	const total = packages
-		.filter((estimate) => !estimate.lifted)
-		.reduce(
-			(total, current) =>
-				current.lifted ? total : total + current.estimatedMoney,
-			0,
-		)
-		.toLocaleString("en-US", {
-			maximumFractionDigits: 0,
-		});
-	return total;
+	return packages.reduce(
+		(total, current) =>
+			current.lifted ? total : total + current.estimatedMoney,
+		0,
+	);
 }
