@@ -38,7 +38,6 @@ function describeResult(username: string, result: DataResults) {
 		} eligible for Tidelift funding. 💸`;
 	}
 
-	// tidelift-me-up reports user-facing reasons, such as the user not existing
 	if (result instanceof TideliftMeUpError) {
 		return result.message;
 	}
