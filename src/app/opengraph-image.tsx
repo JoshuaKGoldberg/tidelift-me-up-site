@@ -24,8 +24,6 @@ const colors = {
 
 // Loads a Google Font as a font file usable by the image renderer.
 // See https://nextjs.org/docs/app/api-reference/functions/image-response
-// Global fetch is available in the Node.js versions supported by Next.js.
-/* eslint-disable n/no-unsupported-features/node-builtins */
 async function loadGoogleFont(family: string, weight: number, text: string) {
 	const url = `https://fonts.googleapis.com/css2?family=${family}:wght@${weight}&text=${encodeURIComponent(
 		text,
@@ -44,7 +42,6 @@ async function loadGoogleFont(family: string, weight: number, text: string) {
 
 	throw new Error(`Failed to load font data for ${family} ${weight}.`);
 }
-/* eslint-enable n/no-unsupported-features/node-builtins */
 
 const title = "tidelift-me-up";
 
