@@ -65,7 +65,8 @@
       "contributions": [
         "ideas",
         "doc",
-        "code"
+        "code",
+        "bug"
       ]
     }
   ],
