@@ -1,9 +1,11 @@
+import { TideliftMeUpError } from "tidelift-me-up";
+
 import { Footer } from "~/components/Footer";
 import { MainArea } from "~/components/MainArea";
 import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
 import { ScrollButton } from "~/components/ScrollButton";
-import { fetchData } from "~/utils/fetchData";
+import { DataResults, fetchData } from "~/utils/fetchData";
 import { SearchParams, getOptions } from "~/utils/getOptions";
 
 import { metadata as defaultMetadata } from "./layout";
@@ -23,16 +25,25 @@ export async function generateMetadata({ searchParams }: HomeProps) {
 
 	const result = await fetchData(options);
 
-	const description = Array.isArray(result)
-		? `${username} has ${result.length} npm package${
-				result.length === 1 ? "" : "s"
-		  } eligible for Tidelift funding. 💸`
-		: `Could not find packages for ${username}`;
-
 	return {
-		description,
+		description: describeResult(username, result),
 		title: `${username} | Tidelift Me Up`,
 	};
+}
+
+function describeResult(username: string, result: DataResults) {
+	if (Array.isArray(result)) {
+		return `${username} has ${result.length} npm package${
+			result.length === 1 ? "" : "s"
+		} eligible for Tidelift funding. 💸`;
+	}
+
+	// tidelift-me-up reports user-facing reasons, such as the user not existing
+	if (result instanceof TideliftMeUpError) {
+		return result.message;
+	}
+
+	return `Could not find packages for ${username}`;
 }
 
 export default async function Home({ searchParams }: HomeProps) {
