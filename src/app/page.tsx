@@ -40,7 +40,7 @@ function describeResult(username: string, result: DataResults) {
 
 		return `${username} has ${result.length} npm package${
 			result.length === 1 ? "" : "s"
-		}; ${withSubscribers} with subscribers. 💸`;
+		}; ${withSubscribers} are eligible for Tidelift funding. 💸`;
 	}
 
 	if (result instanceof TideliftMeUpError) {
