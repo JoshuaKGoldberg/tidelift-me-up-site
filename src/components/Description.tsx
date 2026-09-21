@@ -6,7 +6,7 @@ export interface DescriptionProps {
 	children: string;
 }
 
-const allowedElements = ["a", "code", "em", "strong"];
+const allowedElements = ["a", "code", "em", "img", "strong"];
 
 export function Description({ children }: DescriptionProps) {
 	return (
@@ -18,6 +18,7 @@ export function Description({ children }: DescriptionProps) {
 						{children}
 					</Anchor>
 				),
+				img: ({ alt }) => alt,
 			}}
 			unwrapDisallowed
 		>
