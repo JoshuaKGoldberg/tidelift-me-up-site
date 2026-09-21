@@ -53,12 +53,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	const unclaimedFunding = sumEstimateFunding(result);
 
 	return (
-		<ResultsContainer
-			heading={`${counted(
-				result.length,
-				`${showEstimates ? "Liftable" : "Lifted"} Package`,
-			)} Found`}
-		>
+		<ResultsContainer heading={`${counted(result.length, "Package")} Found`}>
 			{showEstimates && unclaimedFunding > 0 && (
 				<p className={styles.p}>
 					With an unclaimed funding estimate of{" "}
@@ -105,7 +100,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 									break;
 							}
 
-							return order === "ascending" ? compared : -compared;
+							return order === "descending" ? -compared : compared;
 						})
 						.map((packageEstimate) => (
 							<Estimate

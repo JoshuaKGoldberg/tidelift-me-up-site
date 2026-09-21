@@ -21,8 +21,8 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
       tidelift-me-up:
-        specifier: ^0.6.0
-        version: 0.6.1
+        specifier: ^0.7.0
+        version: 0.7.0
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.0.0
@@ -2583,8 +2583,8 @@ packages:
   text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
 
-  tidelift-me-up@0.6.1:
-    resolution: {integrity: sha512-PGDAhWjxPaMk3KLyk5Mgrb0Q0PLFZH4XYsvwz4G1Y+yEnmcohSkhH4FfW3956vZovb0OhsaVg7vcfPqfkbWiOQ==}
+  tidelift-me-up@0.7.0:
+    resolution: {integrity: sha512-8hJHipmLkuZlPB99mxIuGzq5lUyjgHRB4JeoEP6sLIQcgtP/2GboEFDuUiYsUZPHFQHm7MZplx3ldK4Zc8p3rw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5545,7 +5545,7 @@ snapshots:
 
   text-table@0.2.0: {}
 
-  tidelift-me-up@0.6.1:
+  tidelift-me-up@0.7.0:
     dependencies:
       chalk: 5.6.2
       npm-user: 6.1.1
