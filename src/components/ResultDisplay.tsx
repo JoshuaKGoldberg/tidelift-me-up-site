@@ -84,7 +84,6 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 				<tbody>
 					{result
 						.sort((a, b) => {
-							// Packages that need subscribers always go last, whatever the sort
 							const aNeedsSubscribers = needsSubscribers(a);
 							const bNeedsSubscribers = needsSubscribers(b);
 							if (aNeedsSubscribers !== bNeedsSubscribers) {
