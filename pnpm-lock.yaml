@@ -74,7 +74,7 @@ importers:
         version: 17.24.0(eslint@8.57.1)(typescript@5.9.3)
       eslint-plugin-no-only-tests:
         specifier: ^3.1.0
-        version: 3.3.0
+        version: 3.4.0
       eslint-plugin-perfectionist:
         specifier: ^2.3.0
         version: 2.8.0(eslint@8.57.1)(typescript@5.9.3)
@@ -1270,8 +1270,8 @@ packages:
     peerDependencies:
       eslint: '>=8.23.0'
 
-  eslint-plugin-no-only-tests@3.3.0:
-    resolution: {integrity: sha512-brcKcxGnISN2CcVhXJ/kEQlNa0MEfGRtwKtWA16SkqXHKitaKIMrfemJKLKX1YqDU5C/5JY3PvZXd5jEW04e0Q==}
+  eslint-plugin-no-only-tests@3.4.0:
+    resolution: {integrity: sha512-4S3/9Nb7A2tiMcpzEQE9bQSlpeOz6WJkgryBuou/SA8W2x2c8Zf4j0NvTKBjv6qNhF9T79tmkecm/0CHqV0UGg==}
     engines: {node: '>=5.0.0'}
 
   eslint-plugin-perfectionist@2.8.0:
@@ -3968,7 +3968,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  eslint-plugin-no-only-tests@3.3.0: {}
+  eslint-plugin-no-only-tests@3.4.0: {}
 
   eslint-plugin-perfectionist@2.8.0(eslint@8.57.1)(typescript@5.9.3):
     dependencies:
