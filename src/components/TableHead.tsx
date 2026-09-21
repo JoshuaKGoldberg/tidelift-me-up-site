@@ -4,7 +4,7 @@ import styles from "./TableHead.module.css";
 
 type TableOrder = "ascending" | "descending" | undefined;
 
-type TableSort = "estimate" | "lifted" | "name" | undefined;
+type TableSort = "estimate" | "name" | undefined;
 
 export interface TableHeadProps {
 	order: TableOrder;
@@ -70,26 +70,8 @@ export function TableHead({
 				) : null}
 
 				<th className={styles.th}>
-					<div className={styles.centerAlignContainer}>
-						<button
-							className={clsx(
-								styles.sortWidget,
-								sort === "lifted" && styles.isActive,
-							)}
-							onClick={() => setSortAndOrder("lifted")}
-						>
-							Status
-							{sort === "lifted" && (
-								<span
-									className={clsx(
-										styles.caret,
-										order === "descending" && styles.isDescending,
-									)}
-								>
-									▾
-								</span>
-							)}
-						</button>
+					<div className={clsx(styles.centerAlignContainer, styles.label)}>
+						Status
 					</div>
 				</th>
 			</tr>

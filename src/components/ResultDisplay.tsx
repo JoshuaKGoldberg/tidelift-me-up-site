@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { EstimatedPackage } from "tidelift-me-up";
 
+import { needsSubscribers } from "../utils/needsSubscribers";
 import { Estimate } from "./Estimate";
 import styles from "./ResultDisplay.module.css";
 import { ResultsContainer } from "./ResultsContainer";
@@ -35,7 +36,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 		);
 	}
 
-	const [sort, setSort] = useState<"estimate" | "lifted" | "name">();
+	const [sort, setSort] = useState<"estimate" | "name">();
 	const [order, setOrder] = useState<"ascending" | "descending">();
 
 	function setSortAndOrder(received: typeof sort) {
@@ -50,18 +51,27 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	const showEstimates = result.some(
 		(packageEstimate) => !packageEstimate.lifted,
 	);
+	const unclaimedFunding = sumEstimateFunding(result);
+	const withSubscribers = result.filter(
+		(packageEstimate) => !needsSubscribers(packageEstimate),
+	).length;
 
 	return (
 		<ResultsContainer
 			heading={`${counted(
 				result.length,
-				`${showEstimates ? "Liftable" : "Lifted"} Package`,
-			)} Found`}
+				"Package",
+			)}; ${withSubscribers} With Subscribers`}
 		>
-			{showEstimates && (
+			{showEstimates && unclaimedFunding > 0 && (
 				<p className={styles.p}>
 					With an unclaimed funding estimate of{" "}
-					<b>~${sumEstimateFunding(result)}</b>
+					<b>
+						~$
+						{unclaimedFunding.toLocaleString("en-US", {
+							maximumFractionDigits: 0,
+						})}
+					</b>
 				</p>
 			)}
 			<table className={styles.estimates}>
@@ -74,6 +84,12 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 				<tbody>
 					{result
 						.sort((a, b) => {
+							const aGroup = sortGroup(a);
+							const bGroup = sortGroup(b);
+							if (aGroup !== bGroup) {
+								return aGroup - bGroup;
+							}
+
 							const aMoney = a.lifted ? 0 : a.estimatedMoney;
 							const bMoney = b.lifted ? 0 : b.estimatedMoney;
 							let compared: number;
@@ -84,22 +100,15 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 								case "name":
 									compared = a.name.localeCompare(b.name);
 									break;
-								case "lifted":
-									compared = a.lifted ? (b.lifted ? 0 : -1) : b.lifted ? 1 : 0;
-									break;
 								case undefined:
 									compared =
-										a.lifted === b.lifted
-											? aMoney === bMoney
-												? a.name.localeCompare(b.name)
-												: bMoney - aMoney
-											: a.lifted
-											? 1
-											: -1;
+										aMoney === bMoney
+											? a.name.localeCompare(b.name)
+											: bMoney - aMoney;
 									break;
 							}
 
-							return order === "ascending" ? compared : -compared;
+							return order === "descending" ? -compared : compared;
 						})
 						.map((packageEstimate) => (
 							<Estimate
@@ -114,20 +123,22 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	);
 }
 
+function sortGroup(estimatedPackage: EstimatedPackage) {
+	if (needsSubscribers(estimatedPackage)) {
+		return 2;
+	}
+
+	return estimatedPackage.lifted ? 1 : 0;
+}
+
 function counted(count: number, text: string) {
 	return `${count} ${text}${count === 1 ? "" : "s"}`;
 }
 
 function sumEstimateFunding(packages: EstimatedPackage[]) {
-	const total = packages
-		.filter((estimate) => !estimate.lifted)
-		.reduce(
-			(total, current) =>
-				current.lifted ? total : total + current.estimatedMoney,
-			0,
-		)
-		.toLocaleString("en-US", {
-			maximumFractionDigits: 0,
-		});
-	return total;
+	return packages.reduce(
+		(total, current) =>
+			current.lifted ? total : total + current.estimatedMoney,
+		0,
+	);
 }
