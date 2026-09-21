@@ -7,6 +7,7 @@ import { ResultDisplay } from "~/components/ResultDisplay";
 import { ScrollButton } from "~/components/ScrollButton";
 import { DataResults, fetchData } from "~/utils/fetchData";
 import { SearchParams, getOptions } from "~/utils/getOptions";
+import { needsSubscribers } from "~/utils/needsSubscribers";
 
 import { metadata as defaultMetadata } from "./layout";
 import styles from "./page.module.css";
@@ -33,9 +34,13 @@ export async function generateMetadata({ searchParams }: HomeProps) {
 
 function describeResult(username: string, result: DataResults) {
 	if (Array.isArray(result)) {
+		const withSubscribers = result.filter(
+			(estimatedPackage) => !needsSubscribers(estimatedPackage),
+		).length;
+
 		return `${username} has ${result.length} npm package${
 			result.length === 1 ? "" : "s"
-		} eligible for Tidelift funding. 💸`;
+		}; ${withSubscribers} are eligible for Tidelift funding. 💸`;
 	}
 
 	if (result instanceof TideliftMeUpError) {
