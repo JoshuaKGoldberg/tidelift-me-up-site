@@ -13,11 +13,15 @@
 	justify-content: center;
 }
 
+.label,
 .sortWidget {
-	font-family: inherit;
 	font-weight: normal;
 	font-style: italic;
 	font-size: medium;
+}
+
+.sortWidget {
+	font-family: inherit;
 	background-color: transparent;
 	border-width: 0;
 	color: var(--color-foreground);
