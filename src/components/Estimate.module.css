@@ -13,6 +13,7 @@
 	gap: clamp(0.25rem, 1.5vw, 0.5rem);
 	flex-wrap: wrap;
 	max-width: 40vw;
+	overflow-wrap: anywhere;
 }
 
 .description {
