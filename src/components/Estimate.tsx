@@ -3,6 +3,7 @@ import { EstimatedPackage } from "tidelift-me-up";
 import { needsSubscribers } from "../utils/needsSubscribers";
 import { Anchor } from "./Anchor";
 import { CallToAction } from "./CallToAction";
+import { Description } from "./Description";
 import styles from "./Estimate.module.css";
 
 export interface EstimateProps {
@@ -31,7 +32,9 @@ export function Estimate({ estimatedPackage, showEstimates }: EstimateProps) {
 				>
 					{name}
 				</Anchor>
-				<em className={styles.description}>{description}</em>
+				<em className={styles.description}>
+					<Description>{description}</Description>
+				</em>
 			</td>
 			{showEstimates ? (
 				<td className={styles.moneyCell}>
