@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { EstimatedPackage } from "tidelift-me-up";
 
+import { needsSubscribers } from "../utils/needsSubscribers";
 import { Estimate } from "./Estimate";
 import styles from "./ResultDisplay.module.css";
 import { ResultsContainer } from "./ResultsContainer";
@@ -51,9 +52,17 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 		(packageEstimate) => !packageEstimate.lifted,
 	);
 	const unclaimedFunding = sumEstimateFunding(result);
+	const withSubscribers = result.filter(
+		(packageEstimate) => !needsSubscribers(packageEstimate),
+	).length;
 
 	return (
-		<ResultsContainer heading={`${counted(result.length, "Package")} Found`}>
+		<ResultsContainer
+			heading={`${counted(
+				result.length,
+				"Package",
+			)}; ${withSubscribers} With Subscribers`}
+		>
 			{showEstimates && unclaimedFunding > 0 && (
 				<p className={styles.p}>
 					With an unclaimed funding estimate of{" "}
@@ -75,6 +84,13 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 				<tbody>
 					{result
 						.sort((a, b) => {
+							// Packages that need subscribers always go last, whatever the sort
+							const aNeedsSubscribers = needsSubscribers(a);
+							const bNeedsSubscribers = needsSubscribers(b);
+							if (aNeedsSubscribers !== bNeedsSubscribers) {
+								return aNeedsSubscribers ? 1 : -1;
+							}
+
 							const aMoney = a.lifted ? 0 : a.estimatedMoney;
 							const bMoney = b.lifted ? 0 : b.estimatedMoney;
 							let compared: number;
