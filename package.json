@@ -33,7 +33,7 @@
 		"clsx": "^2.0.0",
 		"next": "^14.0.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
+		"react-dom": "^19.0.0",
 		"react-markdown": "^10.1.0",
 		"tidelift-me-up": "^0.7.0"
 	},
@@ -42,7 +42,7 @@
 		"@types/eslint": "^9.0.0",
 		"@types/node": "26.6.2",
 		"@types/react": "^18.2.14",
-		"@types/react-dom": "^18.2.6",
+		"@types/react-dom": "^19.0.0",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^8.0.0",
 		"cspell": "^10.0.0",
