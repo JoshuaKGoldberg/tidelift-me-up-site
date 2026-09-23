@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 
+import { CallToAction } from "./CallToAction";
 import styles from "./ScrollButton.module.css";
 
 export function ScrollButton() {
@@ -25,12 +26,13 @@ export function ScrollButton() {
 	}
 
 	return (
-		<button
+		<CallToAction
+			as="button"
 			className={clsx(styles.scrollButton, visible && styles.visible)}
 			onClick={scrollToTop}
 			type="button"
 		>
 			Back to Top ⬆
-		</button>
+		</CallToAction>
 	);
 }
