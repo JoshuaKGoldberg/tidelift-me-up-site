@@ -6,10 +6,10 @@
 		"forceConsistentCasingInFileNames": true,
 		"incremental": true,
 		"isolatedModules": true,
-		"jsx": "preserve",
-		"lib": ["DOM", "DOM.Iterable", "ESNext"],
-		"module": "ESNext",
-		"moduleResolution": "Bundler",
+		"jsx": "react-jsx",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "esnext",
+		"moduleResolution": "bundler",
 		"noEmit": true,
 		"paths": { "~/*": ["./src/*"] },
 		"plugins": [{ "name": "next" }],
@@ -19,6 +19,11 @@
 		"strict": true,
 		"target": "ES2022"
 	},
-	"include": [".next/types/**/*.ts", "next-env.d.ts", "src"],
+	"include": [
+		".next/dev/types/**/*.ts",
+		".next/types/**/*.ts",
+		"next-env.d.ts",
+		"src"
+	],
 	"exclude": ["node_modules"]
 }

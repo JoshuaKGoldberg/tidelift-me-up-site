@@ -43,6 +43,28 @@ jobs:
           node-version: "22"
       - run: pnpm install --prod --engine-strict --ignore-scripts
 
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/prepare
+      - run: pnpm next typegen
+      - run: pnpm lint
+
+  type_check:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/prepare
+      - run: pnpm next typegen
+      - run: pnpm tsc
+
 name: CI
 
 on:

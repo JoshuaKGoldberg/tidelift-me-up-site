@@ -1,4 +1,4 @@
 *.tsbuildinfo
-.next
+/.next
+/next-env.d.ts
 /node_modules
-next-env.d.ts
