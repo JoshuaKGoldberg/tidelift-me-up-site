@@ -19,6 +19,9 @@ Run [Next.js](https://nextjs.org) locally to start a development server that reb
 pnpm dev
 ```
 
+Next.js also generates the route types that `pnpm lint` and `pnpm tsc` check against.
+Run `pnpm next typegen` to generate them without starting a server.
+
 ### Production Builds
 
 Run Next.js to create an optimized production build in `.next/`:

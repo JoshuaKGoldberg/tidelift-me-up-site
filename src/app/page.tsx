@@ -13,11 +13,11 @@ import { metadata as defaultMetadata } from "./layout";
 import styles from "./page.module.css";
 
 export interface HomeProps {
-	searchParams: SearchParams;
+	searchParams: Promise<SearchParams>;
 }
 
 export async function generateMetadata({ searchParams }: HomeProps) {
-	const options = getOptions(searchParams);
+	const options = getOptions(await searchParams);
 	const username = options.username;
 
 	if (!username) {
@@ -33,7 +33,7 @@ export async function generateMetadata({ searchParams }: HomeProps) {
 }
 
 export default async function Home({ searchParams }: HomeProps) {
-	const options = getOptions(searchParams);
+	const options = getOptions(await searchParams);
 	const result = await fetchData(options);
 
 	return (

@@ -1,5 +1,8 @@
 /.all-contributorsrc
 /.husky
+/.next
+/AGENTS.md
 /_tmp_*
 /dist
+/next-env.d.ts
 /pnpm-lock.yaml
