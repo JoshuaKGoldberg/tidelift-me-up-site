@@ -11,8 +11,9 @@ export function getOptions(searchParams: SearchParams) {
 				searchParams.publisher === "on" && "publisher",
 			].filter(Boolean) as PackageOwnership[],
 		),
-		since: (searchParams.since || undefined) as string | undefined,
-		username: (searchParams.username || "") as string,
+		since: (searchParams.since === "" ? undefined : searchParams.since) as
+			string | undefined,
+		username: (searchParams.username ?? "") as string,
 	};
 }
 

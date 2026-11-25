@@ -25,7 +25,7 @@ const colors = {
 // Loads a Google Font as a font file usable by the image renderer.
 // See https://nextjs.org/docs/app/api-reference/functions/image-response
 async function loadGoogleFont(family: string, weight: number, text: string) {
-	const url = `https://fonts.googleapis.com/css2?family=${family}:wght@${weight}&text=${encodeURIComponent(
+	const url = `https://fonts.googleapis.com/css2?family=${family}:wght@${weight.toString()}&text=${encodeURIComponent(
 		text,
 	)}`;
 	const css = await (await fetch(url)).text();
@@ -40,7 +40,9 @@ async function loadGoogleFont(family: string, weight: number, text: string) {
 		}
 	}
 
-	throw new Error(`Failed to load font data for ${family} ${weight}.`);
+	throw new Error(
+		`Failed to load font data for ${family} ${weight.toString()}.`,
+	);
 }
 
 const title = "tidelift-me-up";
@@ -52,46 +54,44 @@ export default async function OpenGraphImage() {
 	]);
 
 	return new ImageResponse(
-		(
-			<div
+		<div
+			style={{
+				alignItems: "center",
+				background: `linear-gradient(to bottom, ${colors.subtleTop} 0%, ${colors.background} 20%, ${colors.background} 80%, ${colors.subtleBottom} 100%)`,
+				color: colors.foreground,
+				display: "flex",
+				flexDirection: "column",
+				fontFamily: "Raleway",
+				height: "100%",
+				justifyContent: "center",
+				padding: "4rem",
+				width: "100%",
+			}}
+		>
+			<h1
 				style={{
-					alignItems: "center",
-					background: `linear-gradient(to bottom, ${colors.subtleTop} 0%, ${colors.background} 20%, ${colors.background} 80%, ${colors.subtleBottom} 100%)`,
-					color: colors.foreground,
-					display: "flex",
-					flexDirection: "column",
-					fontFamily: "Raleway",
-					height: "100%",
-					justifyContent: "center",
-					padding: "4rem",
-					width: "100%",
+					backgroundClip: "text",
+					backgroundImage: `linear-gradient(to bottom, ${colors.boldTop}, ${colors.boldBottom} 50%)`,
+					color: "transparent",
+					fontSize: "8rem",
+					fontWeight: 900,
+					lineHeight: 1,
+					margin: 0,
+					textAlign: "center",
 				}}
 			>
-				<h1
-					style={{
-						backgroundClip: "text",
-						backgroundImage: `linear-gradient(to bottom, ${colors.boldTop}, ${colors.boldBottom} 50%)`,
-						color: "transparent",
-						fontSize: "8rem",
-						fontWeight: 900,
-						lineHeight: 1,
-						margin: 0,
-						textAlign: "center",
-					}}
-				>
-					{title}
-				</h1>
-				<p
-					style={{
-						fontSize: "3rem",
-						margin: "2rem 0 0",
-						textAlign: "center",
-					}}
-				>
-					{metadata.description}
-				</p>
-			</div>
-		),
+				{title}
+			</h1>
+			<p
+				style={{
+					fontSize: "3rem",
+					margin: "2rem 0 0",
+					textAlign: "center",
+				}}
+			>
+				{metadata.description}
+			</p>
+		</div>,
 		{
 			...size,
 			fonts: [

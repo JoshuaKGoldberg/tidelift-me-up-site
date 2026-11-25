@@ -46,10 +46,8 @@
 .inputPrimary,
 .inputSecondary {
 	background-clip: padding-box, border-box;
-	background-image: linear-gradient(
-			var(--color-background),
-			var(--color-background)
-		),
+	background-image:
+		linear-gradient(var(--color-background), var(--color-background)),
 		var(--colors-background-bold);
 	background-origin: border-box;
 	border-radius: var(--border-radius-large);

@@ -1,30 +1,39 @@
 {
-	"dictionaries": ["typescript"],
+	"dictionaries": ["npm", "node", "typescript"],
 	"ignorePaths": [
-		".github",
 		"*.tsbuildinfo",
+		".all-contributorsrc",
+		".next",
+		"/_tmp_*",
 		"CHANGELOG.md",
-		"coverage",
-		"lib",
+		"dist",
+		"next-env.d.ts",
 		"node_modules",
 		"pnpm-lock.yaml"
 	],
 	"words": [
 		"Codecov",
+		"Grayson",
+		"JoshuaKGoldberg",
+		"MatteoGabriele",
+		"Nanz",
+		"agentscan",
 		"codespace",
 		"commitlint",
 		"contributorsrc",
 		"conventionalcommits",
-		"Grayson",
 		"knip",
 		"lcov",
-		"markdownlintignore",
-		"Nanz",
-		"npmpackagejsonlintrc",
+		"mshick",
+		"octoguide",
 		"opengraph",
 		"outro",
 		"packagejson",
+		"peakoss",
 		"quickstart",
-		"wontfix"
+		"stefanzweifel",
+		"wontfix",
+		"zizmor",
+		"zizmorcore"
 	]
 }

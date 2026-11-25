@@ -1,5 +1,4 @@
+*.tsbuildinfo
 .next
-coverage/
-lib/
+/node_modules
 next-env.d.ts
-node_modules/

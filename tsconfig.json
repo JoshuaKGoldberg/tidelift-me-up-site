@@ -2,7 +2,6 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"declaration": true,
-		"declarationMap": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"incremental": true,
@@ -12,20 +11,14 @@
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
 		"noEmit": true,
-		"paths": {
-			"~/*": ["./src/*"]
-		},
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
+		"paths": { "~/*": ["./src/*"] },
+		"plugins": [{ "name": "next" }],
 		"resolveJsonModule": true,
+		"rewriteRelativeImportExtensions": true,
 		"skipLibCheck": true,
-		"sourceMap": true,
 		"strict": true,
 		"target": "ES2022"
 	},
-	"include": ["next-env.d.ts", "src", ".next/types/**/*.ts"],
+	"include": [".next/types/**/*.ts", "next-env.d.ts", "src"],
 	"exclude": ["node_modules"]
 }
