@@ -2,13 +2,12 @@ import clsx from "clsx";
 
 import styles from "./MainArea.module.css";
 
-export type MainAreaProps<As extends keyof JSX.IntrinsicElements> = Partial<
-	React.HTMLAttributes<As>
-> & {
-	as: As;
-};
+export type MainAreaProps<As extends keyof React.JSX.IntrinsicElements> =
+	Partial<React.HTMLAttributes<As>> & {
+		as: As;
+	};
 
-export function MainArea<As extends keyof JSX.IntrinsicElements>({
+export function MainArea<As extends keyof React.JSX.IntrinsicElements>({
 	as: As,
 	className,
 	...rest

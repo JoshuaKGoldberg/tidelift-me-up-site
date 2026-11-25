@@ -1,5 +1,5 @@
-.all-contributorsrc
-.next/
-coverage/
-lib/
-pnpm-lock.yaml
+/.all-contributorsrc
+/.husky
+/_tmp_*
+/dist
+/pnpm-lock.yaml

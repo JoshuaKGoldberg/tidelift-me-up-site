@@ -68,7 +68,7 @@ export function OptionsForm({ options }: OptionsFormProps) {
 							</label>
 							<input
 								className={styles.inputSecondary}
-								defaultValue={options.since && options.since.toString()}
+								defaultValue={options.since?.toString()}
 								id="since"
 								name="since"
 								type="date"

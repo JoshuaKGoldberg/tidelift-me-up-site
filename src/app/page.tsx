@@ -6,7 +6,7 @@ import { OptionsForm } from "~/components/OptionsForm";
 import { ResultDisplay } from "~/components/ResultDisplay";
 import { ScrollButton } from "~/components/ScrollButton";
 import { DataResults, fetchData } from "~/utils/fetchData";
-import { SearchParams, getOptions } from "~/utils/getOptions";
+import { getOptions, SearchParams } from "~/utils/getOptions";
 import { needsSubscribers } from "~/utils/needsSubscribers";
 
 import { metadata as defaultMetadata } from "./layout";
@@ -32,24 +32,6 @@ export async function generateMetadata({ searchParams }: HomeProps) {
 	};
 }
 
-function describeResult(username: string, result: DataResults) {
-	if (Array.isArray(result)) {
-		const withSubscribers = result.filter(
-			(estimatedPackage) => !needsSubscribers(estimatedPackage),
-		).length;
-
-		return `${username} has ${result.length} npm package${
-			result.length === 1 ? "" : "s"
-		}; ${withSubscribers} are eligible for Tidelift funding. 💸`;
-	}
-
-	if (result instanceof TideliftMeUpError) {
-		return result.message;
-	}
-
-	return `Could not find packages for ${username}`;
-}
-
 export default async function Home({ searchParams }: HomeProps) {
 	const options = getOptions(searchParams);
 	const result = await fetchData(options);
@@ -68,4 +50,22 @@ export default async function Home({ searchParams }: HomeProps) {
 			<Footer />
 		</>
 	);
+}
+
+function describeResult(username: string, result: DataResults) {
+	if (Array.isArray(result)) {
+		const withSubscribers = result.filter(
+			(estimatedPackage) => !needsSubscribers(estimatedPackage),
+		).length;
+
+		return `${username} has ${result.length.toString()} npm package${
+			result.length === 1 ? "" : "s"
+		}; ${withSubscribers.toString()} are eligible for Tidelift funding. 💸`;
+	}
+
+	if (result instanceof TideliftMeUpError) {
+		return result.message;
+	}
+
+	return `Could not find packages for ${username}`;
 }

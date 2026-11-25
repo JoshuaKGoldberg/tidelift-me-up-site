@@ -61,7 +61,7 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 			heading={`${counted(
 				result.length,
 				"Package",
-			)}; ${withSubscribers} With Subscribers`}
+			)}; ${withSubscribers.toString()} With Subscribers`}
 		>
 			{showEstimates && unclaimedFunding > 0 && (
 				<p className={styles.p}>
@@ -123,16 +123,16 @@ export function ResultDisplay({ result }: ResultDisplayProps) {
 	);
 }
 
+function counted(count: number, text: string) {
+	return `${count.toString()} ${text}${count === 1 ? "" : "s"}`;
+}
+
 function sortGroup(estimatedPackage: EstimatedPackage) {
 	if (needsSubscribers(estimatedPackage)) {
 		return 2;
 	}
 
 	return estimatedPackage.lifted ? 1 : 0;
-}
-
-function counted(count: number, text: string) {
-	return `${count} ${text}${count === 1 ? "" : "s"}`;
 }
 
 function sumEstimateFunding(packages: EstimatedPackage[]) {

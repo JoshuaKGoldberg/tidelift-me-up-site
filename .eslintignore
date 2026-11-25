@@ -1,6 +1,0 @@
-!.*
-.next
-coverage
-lib
-node_modules
-pnpm-lock.yaml

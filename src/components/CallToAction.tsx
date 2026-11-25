@@ -2,12 +2,12 @@ import clsx from "clsx";
 
 import styles from "./CallToAction.module.css";
 
-export type CallToActionProps<As extends keyof JSX.IntrinsicElements> =
+export type CallToActionProps<As extends keyof React.JSX.IntrinsicElements> =
 	React.HTMLProps<As> & {
 		as: As;
 	};
 
-export function CallToAction<As extends keyof JSX.IntrinsicElements>({
+export function CallToAction<As extends keyof React.JSX.IntrinsicElements>({
 	as: As,
 	className,
 	...rest

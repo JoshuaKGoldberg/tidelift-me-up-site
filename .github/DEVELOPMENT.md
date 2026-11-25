@@ -3,7 +3,7 @@
 After [forking the repo from GitHub](https://help.github.com/articles/fork-a-repo) and [installing pnpm](https://pnpm.io/installation):
 
 ```shell
-git clone https://github.com/<your-name-here>/tidelift-me-up-site
+git clone https://github.com/(your-name-here)/tidelift-me-up-site
 cd tidelift-me-up-site
 pnpm install
 ```
@@ -11,10 +11,26 @@ pnpm install
 > This repository includes a list of suggested VS Code extensions.
 > It's a good idea to use [VS Code](https://code.visualstudio.com) and accept its suggestion to install them, as they'll help with development.
 
-Then, you can run the local Next.js server:
+## Building
+
+Run [Next.js](https://nextjs.org) locally to start a development server that rebuilds as you save files:
 
 ```shell
 pnpm dev
+```
+
+### Production Builds
+
+Run Next.js to create an optimized production build in `.next/`:
+
+```shell
+pnpm build
+```
+
+Then start a server for that production build:
+
+```shell
+pnpm start
 ```
 
 ## Formatting
@@ -33,11 +49,9 @@ pnpm format --write
 This package includes several forms of linting to enforce consistent code quality and styling.
 Each should be shown in VS Code, and can be run manually on the command-line:
 
-- `pnpm lint` ([ESLint](https://eslint.org) with [typescript-eslint](https://typescript-eslint.io)): Lints JavaScript and TypeScript source files
+- `pnpm lint` ([ESLint](https://eslint.org) with [typescript-eslint](https://typescript-eslint.io)): Lints source files, including JavaScript, Markdown, and TypeScript
 - `pnpm lint:knip` ([knip](https://github.com/webpro/knip)): Detects unused files, dependencies, and code exports
-- `pnpm lint:md` ([Markdownlint](https://github.com/DavidAnson/markdownlint)): Checks Markdown source files
-- `pnpm lint:package-json` ([npm-package-json-lint](https://npmpackagejsonlint.org/)): Lints the `package.json` file
-- `pnpm lint:packages` ([pnpm dedupe --check](https://pnpm.io/cli/dedupe)): Checks for unnecessarily duplicated packages in the `pnpm-lock.yml` file
+- `pnpm lint:knip:production` ([knip](https://knip.dev/features/production-mode)): Detects unused files, dependencies, and code exports in production code, not counting usage from tests
 - `pnpm lint:spelling` ([cspell](https://cspell.org)): Spell checks across all source files
 
 Read the individual documentation for each linter to understand how it can be configured and used best.

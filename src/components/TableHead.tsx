@@ -2,16 +2,16 @@ import clsx from "clsx";
 
 import styles from "./TableHead.module.css";
 
-type TableOrder = "ascending" | "descending" | undefined;
-
-type TableSort = "estimate" | "name" | undefined;
-
 export interface TableHeadProps {
 	order: TableOrder;
 	setSortAndOrder: (received: TableSort) => void;
 	showEstimates: boolean;
 	sort: TableSort;
 }
+
+type TableOrder = "ascending" | "descending" | undefined;
+
+type TableSort = "estimate" | "name" | undefined;
 
 export function TableHead({
 	order,
@@ -28,7 +28,9 @@ export function TableHead({
 							styles.sortWidget,
 							sort === "name" && styles.isActive,
 						)}
-						onClick={() => setSortAndOrder("name")}
+						onClick={() => {
+							setSortAndOrder("name");
+						}}
 					>
 						Package Name
 						{sort === "name" && (
@@ -51,7 +53,9 @@ export function TableHead({
 									styles.sortWidget,
 									sort === "estimate" && styles.isActive,
 								)}
-								onClick={() => setSortAndOrder("estimate")}
+								onClick={() => {
+									setSortAndOrder("estimate");
+								}}
 							>
 								Estimate
 								{sort === "estimate" && (
